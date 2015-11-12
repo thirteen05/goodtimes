@@ -1,0 +1,50 @@
+#age-verify-wrapper{
+  height: 100vh;
+  background-image: url(images/Good-Times-Tobacco-Dark-Smoke-BG.jpg);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 2000;
+  
+  #age-verify-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  h3{
+    padding-bottom: 30px;
+  }
+  
+  #age-verify-logo{
+    
+  }
+  
+  #dm-age-month,
+  #dm-age-day,
+  #dm-age-year{
+    border-radius: 0px;
+    opacity: 0.9;
+    font-family: $pFont;
+  }
+  
+  #check-age-button{
+      border: 3px double $yellow;
+      background-color: transparent;
+      font-family: $hFont;
+      text-transform: uppercase;
+      border-radius: 0;
+      margin-top: 30px;
+      padding: 15px;
+      transition: all .5s;
+    
+      &:hover{
+          transform: scale(1.1,1.1);
+          background-color: $yellow;
+          color: $charcoal;
+          border-color: $charcoal;
+        }
+  }
+}

@@ -1,0 +1,28 @@
+#social-media-bar{
+  background-color: $charcoal;
+  width: 60px;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  padding: 15px;
+  -webkit-box-shadow: 3px 3px 5px rgba(0,0,0,0.6);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    3px 3px 5px rgba(0,0,0,0.6);  /* Firefox 3.5 - 3.6 */
+  box-shadow:         3px 3px 5px rgba(0,0,0,0.6);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  
+  ul{
+    list-style-type: none;
+    padding-left: 0;
+    
+    li{
+      padding: 5px 0;
+      
+      i.fa{
+        font-size: 24px;  
+      }
+    }
+  }
+}

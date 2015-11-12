@@ -1,0 +1,109 @@
+$yellow: #fcc328!important;
+$charcoal: #232021!important;
+
+.outline{
+  border: 1px solid red;
+  min-height: 100px;
+  height: 100%;
+}
+
+.bg-charcoal{
+  background-color: $charcoal;
+}
+
+html{
+  min-height: 100vh;
+  font-size: 16px;
+  font-family: $pFont;
+  
+  &.scroll-lock{
+    overflow: hidden;
+  }
+}
+
+body{
+  height: 100vh;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: $hFont;
+  font-weight: 700;
+  margin: 0;
+}
+
+p{
+  font-family: $pFont;
+  font-size: 1.2rem;
+}
+
+.text-shadow{
+  text-shadow: 4px 3px 3px rgba(0,0,0,0.5);
+}
+
+#loading{
+  height: 100vh;
+  width: 100vw;
+  background-color: $charcoal;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  z-index: 3000;
+  transition: all 1s;
+  
+  i.fa{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    
+  }
+  
+  &.hide-load{
+    opacity: 0;
+    z-index: 0;
+  }
+  
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
+  -ms-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite;
+}

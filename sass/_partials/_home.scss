@@ -1,10 +1,582 @@
-#section-home-example{
-  background-image: url(images/thirteen05-blue-square-bg.jpg);
-  height: 100vh;
+#section-home-top{
+  background-color: #CCC;
   
-  #logo{
-    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
-    -webkit-filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
+  .jumbotron{
+    height: 50vh;
+    background-image: url(images/Good-Times-Tobacco-Pouch-Background.jpg);
+    margin-bottom: 0;
+    padding-top: 90px;
+    background-size: cover;
+    background-position: center center;
     
+    .btn.btn-primary{
+      border: 3px double $yellow;
+      background-color: transparent;
+      font-family: $hFont;
+      text-transform: uppercase;
+      border-radius: 0;
+      margin-top: 30px;
+      padding: 15px;
+      transition: all .5s;
+      
+      &:hover{
+        transform: scale(1.1,1.1);
+        background-color: $yellow;
+        color: $charcoal;
+        border-color: $charcoal;
+      }
+    }
+    
+    h1{
+      font-size: 24px;
+      padding-left: 30px;
+      border-left: 3px double white;
+      line-height: 1;
+    }
   }
+  
+  
+  #home-top-brands-wrapper{
+    height: 10vh;
+    padding: 15px;
+    
+    .carousel-indicators{
+      position: relative;
+      left: 0;
+      margin: 0;
+      width: 100%;
+      bottom: 0;
+      
+      li{
+        height: auto;
+        width: auto;
+        margin: 0;
+        text-indent: 0;
+        font-size: 24px;
+        border: none;
+        
+        #Brands-Good-Times-SVG{
+          width: 200px;
+        }
+        
+        #Brands-Little-Wild-SVG{
+          width: 80px;
+        }
+        
+        #Brands-Sweet-Woods-SVG{
+          width: 180px;
+        }
+        
+        #Brands-HD-SVG{
+          width: 150px;
+        }
+        
+        &.active{
+          background-color: transparent;
+          
+          svg{
+            path,polygon{
+              fill: $yellow;
+              transition: all .5s;
+            }
+          } 
+        }
+      }
+    }
+  }
+  
+  #home-brands-carousel-wrapper{
+    height: 30vh;
+    background-image: url(images/Good-Times-Tobacco-Concrete-BG.jpg);
+    background-size: cover;
+    
+    .container{
+      height: 100%;
+      
+      .row{
+        height: 100%;
+      
+        .col-md-12{
+          height: 100%;
+      
+          #carousel-home-brands{
+            height: 100%;
+      
+            .carousel-inner{
+              height: 100%;
+      
+              .item{
+                height: 100%;
+                
+                .carousel-pouch{
+                  transition: all 1s;
+                  
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  #home-top-testimonial-wrapper{
+    background-color: $charcoal;
+    padding: 15px 0;
+    
+    h2{
+      font-size: 16px;
+    }
+  }
+}
+
+#section-home-dark{
+  background-image: url(images/Good-Times-Tobacco-Dark-Smoke-BG.jpg);
+  
+  .row{
+    
+    .col-md-6{
+      position: relative;
+      padding: 15px;
+      
+      h3{
+          font-size: 24px;
+      }
+    }
+  }
+  
+  .btn.btn-primary{
+      border: 3px double $yellow;
+      background-color: transparent;
+      font-family: $hFont;
+      text-transform: uppercase;
+      border-radius: 0;
+      margin-top: 15px;
+      padding: 15px;
+      transition: all .5s;
+    
+      &:hover{
+          transform: scale(1.1,1.1);
+          background-color: $yellow;
+          color: $charcoal;
+          border-color: $charcoal;
+        }
+  }
+}
+
+#section-home-values{
+  background-image: url(images/Good-Times-Tobacco-Plant-BG.jpg);
+  background-position: center center;
+  
+  #values-top-wrapper{
+    
+    .row{
+      height: 100%;
+      
+      .col-md-6{
+        
+        &:first-of-type{
+          
+          #mission-statement{
+            width: 400px;
+            height: 400px;
+            background-color: rgba(0,0,0,0.8);
+            padding: 30px;
+            text-align: center;
+            border: 3px double $yellow;
+            
+            p{
+              font-size: 1rem;
+            }
+          }
+        }
+        
+        &:nth-of-type(2){
+          
+          #core-values{
+
+          }
+        }
+      }
+    }
+  }
+  
+  
+  #values-bottom-wrapper{
+    
+    h3{
+      font-size: 20px;
+      margin-bottom: 15px;
+      
+      #core-value-span{
+        text-transform: uppercase;
+      }
+      
+    }
+    
+    .row:nth-of-type(2){
+      padding-top: 30px;
+      min-height: 100px;
+      
+      .values-logo-wrap{
+        display: inline-block;
+        width: 12%;
+        position: relative;
+
+        img{
+          max-width: 80%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          -webkit-transform: translateX(-50%) translateY(-50%);
+          -moz-transform: translateX(-50%) translateY(-50%);
+          -ms-transform: translateX(-50%) translateY(-50%);
+
+          &:nth-of-type(2){
+            max-width: 70%;
+          }
+        }
+      }
+    }
+    
+    .btn.btn-primary{
+      border: 3px double $yellow;
+      background-color: rgba(0,0,0,0.8);
+      font-family: $hFont;
+      text-transform: uppercase;
+      border-radius: 0;
+      padding: 15px;
+      transition: all .5s;
+      margin-bottom: 15px;
+    
+      &:hover{
+          transform: scale(1.1,1.1);
+          background-color: $yellow;
+          color: $charcoal;
+          border-color: $charcoal;
+        }
+    }
+  }
+}
+
+#section-home-roll{
+  background-image: url(images/Good-Times-Tobacco-Hangout.jpg);
+  
+  h3{
+    margin-bottom: 30px;
+    font-size: 2rem;
+  }
+}
+
+@media(min-width: 996px){
+  
+  #section-home-top{
+    background-color: #CCC;
+
+    .jumbotron{
+      height: 40vh;
+      background-image: url(images/Good-Times-Tobacco-Pouch-Background.jpg);
+      margin-bottom: 0;
+      padding-top: 90px;
+
+      .btn.btn-primary{
+        border: 3px double $yellow;
+        background-color: transparent;
+        font-family: $hFont;
+        text-transform: uppercase;
+        border-radius: 0;
+        margin-top: 30px;
+        padding: 15px;
+        transition: all .5s;
+
+        &:hover{
+          transform: scale(1.1,1.1);
+          background-color: $yellow;
+          color: $charcoal;
+          border-color: $charcoal;
+        }
+      }
+
+      h1{
+        font-size: 36px;
+        padding-left: 30px;
+        border-left: 3px double white;
+        line-height: 1;
+      }
+    }
+
+
+    #home-top-brands-wrapper{
+      height: 10vh;
+      padding: 15px;
+
+      .carousel-indicators{
+        position: relative;
+        left: 0;
+        margin: 0;
+        width: 100%;
+        bottom: 0;
+
+        li{
+          height: auto;
+          width: auto;
+          margin: 0;
+          text-indent: 0;
+          font-size: 24px;
+          border: none;
+
+          #Brands-Good-Times-SVG{
+            width: 200px;
+          }
+
+          #Brands-Little-Wild-SVG{
+            width: 80px;
+          }
+
+          #Brands-Sweet-Woods-SVG{
+            width: 180px;
+          }
+
+          #Brands-HD-SVG{
+            width: 150px;
+          }
+
+          &.active{
+            background-color: transparent;
+
+            svg{
+              path,polygon{
+                fill: $yellow;
+                transition: all .5s;
+              }
+            } 
+          }
+        }
+      }
+    }
+
+    #home-brands-carousel-wrapper{
+      height: 30vh;
+      background-image: url(images/Good-Times-Tobacco-Concrete-BG.jpg);
+      background-size: cover;
+      
+      .container{
+        height: 100%;
+
+        .row{
+          height: 100%;
+
+          .col-md-12{
+            height: 100%;
+            
+            #mobile-pouch{
+              height: 100%;
+              width: auto;
+            }
+
+            #carousel-home-brands{
+              height: 100%;
+
+              .carousel-inner{
+                height: 100%;
+
+                .item{
+                  height: 100%;
+
+                  .carousel-pouch{
+                    transition: all 1s;
+
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #home-top-testimonial-wrapper{
+      min-height: 20vh;
+      background-color: $charcoal;
+      padding-top: 15px;
+
+      h2{
+        font-size: 24px;
+      }
+    }
+  }  
+  
+  #section-home-dark{
+    height: 100vh;
+    background-image: url(images/Good-Times-Tobacco-Dark-Smoke-BG.jpg);
+
+    .row{
+      height: 50vh;
+
+      .col-md-6{
+        position: relative;
+        padding-top: 10vh;
+
+        h3{
+            font-size: 44px;
+        }
+      }
+    }
+
+    .btn.btn-primary{
+        border: 3px double $yellow;
+        background-color: transparent;
+        font-family: $hFont;
+        text-transform: uppercase;
+        border-radius: 0;
+        margin-top: 15px;
+        padding: 15px;
+        transition: all .5s;
+
+        &:hover{
+            transform: scale(1.1,1.1);
+            background-color: $yellow;
+            color: $charcoal;
+            border-color: $charcoal;
+          }
+    }
+  }
+  
+  
+  #section-home-values{
+    height: 100vh;
+    background-image: url(images/Good-Times-Tobacco-Plant-BG.jpg);
+
+    #values-top-wrapper{
+      height: 60vh;
+
+      .row{
+        height: 100%;
+
+        .col-md-6{
+          height: 100%;
+
+          &:first-of-type{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            #mission-statement{
+              width: 400px;
+              height: 400px;
+              background-color: rgba(0,0,0,0.8);
+              padding: 30px;
+              text-align: center;
+              border: 3px double $yellow;
+
+              p{
+                font-size: 1rem;
+              }
+            }
+          }
+
+          &:nth-of-type(2){
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            #core-values{
+              width: 500px;
+              height: 500px;
+            }
+          }
+        }
+      }
+    }
+
+
+    #values-bottom-wrapper{
+      height: 40vh;
+
+      h3{
+        font-size: 36px;
+
+        #core-value-span{
+          text-transform: uppercase;
+        }
+
+      }
+
+      .row:nth-of-type(2){
+        padding-top: 30px;
+        min-height: 100px;
+
+        .values-logo-wrap{
+          display: inline-block;
+          width: 12%;
+          position: relative;
+
+          img{
+            max-width: 80%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -ms-transform: translateX(-50%) translateY(-50%);
+
+            &:nth-of-type(2){
+              max-width: 70%;
+            }
+          }
+        }
+      }
+
+      .btn.btn-primary{
+        border: 3px double $yellow;
+        background-color: rgba(0,0,0,0.8);
+        font-family: $hFont;
+        text-transform: uppercase;
+        border-radius: 0;
+        padding: 15px;
+        transition: all .5s;
+
+        &:hover{
+            transform: scale(1.1,1.1);
+            background-color: $yellow;
+            color: $charcoal;
+            border-color: $charcoal;
+          }
+      }
+    }
+  }
+  
+  #section-home-roll{
+    height: 100vh;
+    background-image: url(images/Good-Times-Tobacco-Hangout.jpg);
+
+    h3{
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+  }
+  
+}
+
+@media(min-width: 996px){
+  
+  #section-home-top{
+    
+    .jumbotron{
+      
+      h1{
+        font-size: 44px;
+        
+      }
+    }
+  }
+  
+
+}
+
+@media(min-width: 1200px){
+  
+
 }

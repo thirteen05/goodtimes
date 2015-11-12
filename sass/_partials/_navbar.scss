@@ -1,0 +1,44 @@
+#goodtimes-navbar{
+  background-color: rgba(0,0,0,0);
+  border: none;
+  transition: all .5s;
+  
+  .navbar-collapse{
+    border: none;
+  }
+  
+  .navbar-nav{
+    
+    li{
+      
+      a{
+        font-family: $hFont;
+        font-size: 28px;
+        text-shadow: 4px 3px 3px rgba(0,0,0,0.5);
+        color: $yellow;
+        transition: all .5s;
+        
+        &:hover{
+          color: #FFFFFF!important;
+        }
+      }
+      
+      &.active{
+      
+        a{
+          background-color: transparent;
+          color: #FFFFFF!important;
+        }
+      }
+    }
+  }
+  
+  .navbar-brand{
+    padding: 5px;
+    
+    img{
+      height: 50px;
+      
+    }
+  }
+}
