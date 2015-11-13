@@ -73,12 +73,17 @@
         <div class="modal modal-lg fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
+              <div class="modal-header text-center">
+              
+                <img width="200" src="<?php echo get_category_logo(); ?>" />
+              
+              </div>
               <div class="modal-body">
                 
                   <!-- template -->
                   <div class="ms-tabs-template">
                       <!-- masterslider -->
-                      <div class="master-slider ms-skin-default" id="masterslider2">
+                      <div class="master-slider ms-skin-black-1" id="masterslider2">
 
                         <?php foreach($posts_array as $post): ?>
 

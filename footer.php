@@ -155,6 +155,68 @@
           
         </script>
 
+        <script>
+
+          $('#carousel-values').on('slide.bs.carousel',function(){
+            
+            var activeSlide = $(this).find('.item.active');
+            var slideNumber = activeSlide.attr('data-slide-number');
+            
+            if(slideNumber == 1){
+              
+              $('#core-value-span').fadeOut('slow',function(){
+                $('#core-value-span').text('FRESHNESS');
+              });
+              
+              $('#core-value-span').fadeIn();
+              
+            }
+            
+            if(slideNumber == 2){
+              
+              $('#core-value-span').fadeOut('slow',function(){
+                $('#core-value-span').text('QUALITY');
+              });
+              
+              $('#core-value-span').fadeIn();
+              
+            }
+            
+            if(slideNumber == 3){
+              
+              $('#core-value-span').fadeOut('slow',function(){
+                $('#core-value-span').text('INNOVATION');
+              });
+              
+              $('#core-value-span').fadeIn();
+              
+            }
+            
+            if(slideNumber == 4){
+              
+              $('#core-value-span').fadeOut('slow',function(){
+                $('#core-value-span').text('VALUE');
+              });
+              
+              $('#core-value-span').fadeIn();
+              
+            }
+            
+            if(slideNumber == 5){
+              
+              $('#core-value-span').fadeOut('slow',function(){
+                $('#core-value-span').text('FLAVOR');
+              });
+              
+              $('#core-value-span').fadeIn();
+              
+            }
+            
+          });
+          
+
+        </script>
+
 <script>
 
    var angle = 0;

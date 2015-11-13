@@ -1,13 +1,12 @@
 .tweet-list{
   
+  #twitter-column-2,
+  #twitter-column-3,
+  #twitter-column-4{
+    display: none!important;
+  }
+  
   .tweet-wrapper{
-    
-    &:nth-of-type(2),
-    &:nth-of-type(3),
-    &:nth-of-type(4){
-      display: none;
-      
-    }
     
     .tweet-thumb{
       padding: 10px;
@@ -35,14 +34,15 @@
 @media(min-height: 768px){
   
   .tweet-list{
+    
+    #twitter-column-2,
+    #twitter-column-3,
+    #twitter-column-4{
+      display: block!important;
+    }
+    
   
     .tweet-wrapper{
-      
-      &:nth-of-type(2),
-      &:nth-of-type(3),
-      &:nth-of-type(4){
-        display: inherit;
-      }
 
       .tweet-thumb{
         padding: 10px;

@@ -12,7 +12,7 @@ require_once("instagram-api/src/Instagram.php");
 
 add_action( 'init', 'product_cpt_init' );
 /**
- * Register a book post type.
+ * Register a product post type.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_post_type
  */
@@ -67,6 +67,29 @@ add_action( 'wp_enqueue_scripts', 'jquery_scripts' );
 
 
 remove_filter('term_description','wpautop');
+  
+//include 'product-meta-box.php';
+
+function get_category_logo(){
+  
+  $logo_url = '';
+  
+  if(is_category('4K')):
+  
+    $logo_url = get_template_directory_uri().'/images/Good-Times-Category-Logo-4K.png';
+      
+  endif;
+  
+  if(is_category('Good Times')):
+  
+    $logo_url = get_template_directory_uri().'/images/Good-Times-Category-Logo-Good-Times.png';
+      
+  endif;
+  
+  return $logo_url;
+  
+}
+  
 
 
 ?>

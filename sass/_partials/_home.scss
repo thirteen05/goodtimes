@@ -410,16 +410,19 @@
   #section-home-dark{
     height: 100vh;
     background-image: url(images/Good-Times-Tobacco-Dark-Smoke-BG.jpg);
+    padding-bottom: 60px;
 
     .row{
-      height: 50vh;
-
+      
       .col-md-6{
         position: relative;
-        padding-top: 10vh;
 
         h3{
             font-size: 44px;
+        }
+        
+        &.text-column{
+          padding-top: 120px;
         }
       }
     }
@@ -449,7 +452,7 @@
     background-image: url(images/Good-Times-Tobacco-Plant-BG.jpg);
 
     #values-top-wrapper{
-      height: 60vh;
+      height: 55vh;
 
       .row{
         height: 100%;
@@ -492,13 +495,15 @@
 
 
     #values-bottom-wrapper{
-      height: 40vh;
+      height: 45vh;
 
       h3{
         font-size: 36px;
+        margin: 0;
 
         #core-value-span{
           text-transform: uppercase;
+          font-size: 60px;
         }
 
       }
@@ -535,13 +540,14 @@
         font-family: $hFont;
         text-transform: uppercase;
         border-radius: 0;
-        padding: 15px;
         transition: all .5s;
+        margin: 0;
+        font-size: 60px;
+        padding: 0;
 
         &:hover{
             transform: scale(1.1,1.1);
             background-color: $yellow;
-            color: $charcoal;
             border-color: $charcoal;
           }
       }

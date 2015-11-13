@@ -36,7 +36,10 @@
         ?>        
                      <div class="tweet-list">
                        
+                        <?php $tweet_number = 0; ?>
+                       
                         <?php if(!empty($twitterData)): foreach($twitterData as $tweet):
+                                $tweet_number++;
                                 $latestTweet = $tweet->text;
                                 $latestTweet = preg_replace('/http:\/\/([a-z0-9_\.\-\+\&\!\#\~\/\,]+)/i', '<a href="http://$1" target="_blank">http://$1</a>', $latestTweet);
                                 $latestTweet = preg_replace('/https:\/\/([a-z0-9_\.\-\+\&\!\#\~\/\,]+)/i', '<a href="http://$1" target="_blank">https://$1</a>', $latestTweet);
@@ -44,7 +47,7 @@
                                 $tweetTime = date("D M d H:i:s",strtotime($tweet->created_at));
                         ?>
                        
-                        <div class="tweet-wrapper col-md-3">
+                        <div class="tweet-wrapper col-md-3" id="twitter-column-<?php echo $tweet_number; ?>">
                             <div class="tweet-thumb">
                               <span class="had-thumb"><a href="<?php echo $tweet->user->url; ?>" title="<?php echo $tweet->user->name; ?>"><img alt="" src="<?php echo $tweet->user->profile_image_url; ?>"></a></span>
                               <h5 class="font-white tweeter-name"><?php echo $tweet->user->name; ?></h5>

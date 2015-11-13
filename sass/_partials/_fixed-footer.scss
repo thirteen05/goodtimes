@@ -1,7 +1,6 @@
 #section-fixed-footer{
   position: fixed;
   bottom: 0;
-  height: 60px;
   background-color: $yellow;
   width: 100%;
   box-shadow: 0px -3px 8px rgba(0,0,0,0.6);
@@ -12,12 +11,40 @@
     .row{
       height: 100%;
       
+      #join-us{
+        padding-top: 10px;
+      }
+      
       .col-md-6{
+        padding: 8px;
         height: 100%;
+        
+        
+        p{
+          line-height: 18px;
+          margin: 0;
+        }
+        
+        #get-email-input{
+          max-width: 200px;
+          display: inline-block;
+          border: none;
+          border-radius: 0;
+        }
+        
+        #email-btn{
+          display: inline-block;
+          border: 3px double $charcoal;
+          color: $charcoal;
+          background-color: transparent;
+          font-family: $hFont;
+          text-transform: uppercase;
+          border-radius: 0;
+          transition: all .5s;
+          min-width: 200px;
+        }
       }
       
     }
   }
-  
-  
 }
