@@ -21,6 +21,6 @@
     "jquery.stellar": "stellar.js#~0.6.2",
     "Scrollify": "~0.1.10",
     "animate.css": "~3.4.0",
-    "slick-carousel": "slick.js#~1.5.8"
+    "jquery-selectric": "~1.9.4"
   }
 }

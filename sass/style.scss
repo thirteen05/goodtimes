@@ -15,8 +15,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 //@import "compass/reset";
 
 //@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
-@import "../bower_components/slick-carousel/slick/slick";
-@import "../bower_components/slick-carousel/slick/slick-theme";
 
 @import "_partials/fonts";
 @import "_partials/globals";
@@ -24,8 +22,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "_partials/modal";
 @import "_partials/btn";
 @import "_partials/home";
+@import "_partials/page";
+@import "_partials/contact";
 @import "_partials/category";
+@import "_partials/category-brand-select";
+@import "_partials/values";
+@import "_partials/single-product";
 @import "_partials/fixed-footer";
+@import "_partials/selectric";
 @import "_partials/social-media-bar";
 @import "_partials/age-verify";
 @import "_partials/twitter";

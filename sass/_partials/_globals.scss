@@ -50,7 +50,7 @@ p{
   z-index: 3000;
   transition: all 1s;
   
-  i.fa{
+  #spinner-wrapper{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -58,6 +58,16 @@ p{
     -webkit-transform: translateX(-50%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
     -ms-transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    
+    img{
+      display: block;
+      max-width: 150px;
+      margin-bottom: 15px;
+    }
+  }
+  
+  i.fa{
     
   }
   
@@ -67,6 +77,11 @@ p{
   }
   
 }
+
+.btn:focus,.btn:active {
+   outline: none !important;
+}
+
 
 @-webkit-keyframes rotating /* Safari and Chrome */ {
   from {

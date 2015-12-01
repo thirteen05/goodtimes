@@ -12,8 +12,6 @@
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/bower_components/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/bower_components/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/bower_components/animate.css/animate.min.css">
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/bower_components/slick-carousel/slick/slick.css">
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/bower_components/slick-carousel/slick/slick-theme.css">
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/masterslider/style/masterslider.css">
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/masterslider/skins/default/style.css">
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/main.css">
@@ -30,9 +28,15 @@
       
       <?php wp_head(); ?>
   </head>
+  
     <body <?php body_class(); ?>>
       
-      <div id="loading"><i class="fa fa-spinner fa-3x font-yellow rotating"></i></div>
+      <div id="loading">
+        <div id="spinner-wrapper">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/Good-Times-Logo.svg" width="200" />
+          <i class="fa fa-spinner fa-3x font-yellow rotating"></i>
+        </div>
+      </div>
       
       <?php get_template_part('navbar'); ?>
       <?php get_template_part('age-verify'); ?>

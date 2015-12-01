@@ -1,10 +1,26 @@
 <section id="section-category-top">
   <div class="container">
     <div class="row">
+      
+      <div class="col-md-12 hidden-md hidden-lg" style="padding-top: 75px;">
+        <select id="brand-category-select" class="form-control">
+          <option value="select" selected>View by Brand...</option>
+          <option value="good-times">Good Times</option>
+          <option value="4k">4K's</option>
+          <option value="hd">#HD</option>
+          <option value="flat-wrap">Flat Wrap</option>
+          <option value="little-wild">Little & Wild</option>
+          <option value="double-7">Double 7's</option>
+          <option value="sweet-woods">Sweet Woods</option>
+          <option value="remington">Remington</option>
+          <option value="mini">Mini</option>
+        </select>
+      </div>
+      
       <div class="col-md-10 col-md-offset-1">
 
-          <div class="text-center">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/Carousel-Brand-Strip.png" height="100" />
+          <div class="text-center hidden-xs">
+            <?php get_template_part('partials/category-brand-select'); ?>
           </div>
         
         <?php $cat_name = single_cat_title('',false); ?>
@@ -45,10 +61,28 @@
 			    <div class="ms-slide" data-slide-number="<?php echo $slide_count; ?>">
 			        <img data-toggle="modal" data-target="#myModal" src="../masterslider/style/blank.gif" data-src="<?php echo $image[0]; ?>" alt="lorem ipsum dolor sit"/>  
 			        <div class="ms-info">
-			        	<h3><?php echo $post->post_title; ?></h3>
-			        	<h4>COMPANY CEO</h4>
-			        	<p class="email">E-Mail: <a href="#">juliab@jourrapide.com</a></p>
-			        	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                      <h3 class="product-title"><?php echo $post->post_title; ?></h3>
+                      
+                      <?php if(rwmb_meta('flavor_profile')): ?>
+                        <p><?php echo rwmb_meta('flavor_profile'); ?></p>
+                      <?php endif; ?>
+                      
+                        <table class="table hidden-sm hidden-md hidden-lg" id="mobile-product-table">
+                          <tbody>
+                            <tr>
+                              <td class="table-left">Product Type:</td>
+                              <td><?php echo get_product_type(); ?></td>
+                            </tr>
+                            <tr>
+                              <td class="table-left">Description:</td>
+                              <td><?php echo rwmb_meta('brand_description'); ?></td>
+                            </tr>
+                            <tr>
+                              <td class="table-left">Ring Gauge:</td>
+                              <td><?php echo get_ring_gauge(); ?></td>
+                            </tr>
+                          </tbody>
+                        </table>
 			        </div>     
                     <!-- Button trigger modal -->
 			    </div>
@@ -61,13 +95,6 @@
 			<div class="ms-staff-info" id="staff-info"> </div>
 		</div>
 		<!-- end of template -->
-        
-        
-        
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-          Launch demo modal
-        </button>
 
         <!-- Modal -->
         <div class="modal modal-lg fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -76,6 +103,7 @@
               <div class="modal-header text-center">
               
                 <img width="200" src="<?php echo get_category_logo(); ?>" />
+                <img width="40" type="button" data-dismiss="modal" aria-label="Close" src="<?php echo get_template_directory_uri(); ?>/images/Modal-Close-Button.svg" style="position: absolute; top: 15px; right: 15px; cursor: pointer" />
               
               </div>
               <div class="modal-body">
@@ -97,28 +125,47 @@
                                 </div>
                                 <div class="col-md-4">
                                   
+                                  <?php if(rwmb_meta('brand_description')): ?>
+                                  
                                   <h4>Description</h4>
-                                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+                                  <p><?php echo rwmb_meta('brand_description'); ?></p>
+                                  
+                                  <?php endif; ?>
+                                  
+                                  
+                                  <?php if(rwmb_meta('flavor_profile')): ?>
                                   
                                   <h4>Flavor Profile</h4>
-                                  <p><?php echo $post->post_content; ?></p>
+                                  <p><?php echo rwmb_meta('flavor_profile'); ?></p>
+                                  
+                                  <?php endif; ?>
                                   
                                   <img width="200" src="<?php echo get_template_directory_uri(); ?>/images/Good-Times-Logo.svg" />
                                   
                                 </div>
                                 <div class="col-md-4">
-                                  <h4>Wrapper</h4>
-                                  <p>Natural Leaf Connecticut Shade</p>
+                                  
+                                  <?php if(rwmb_meta('product_type')): ?>
+                                  
+                                  <h4>Product Type</h4>
+                                  <p><?php echo get_product_type(); ?></p>
+                                  
+                                  <?php endif; ?>
+                                  
+                                  <?php if(rwmb_meta('ring_gauge')): ?>
                                   
                                   <h4>Ring Gauge</h4>
-                                  <p>27.8 X 4.25"</p>
+                                  <p><?php echo get_ring_gauge(); ?></p>
                                   
-                                  <h4>Pouch Count</h4>
-                                  <p>Natural Leaf Connecticut Shade</p>
+                                  <?php endif; ?>
                                   
-                                  <h4>Available in 9 Good Times Flavors</h4>
-                                  <p>Natural Leaf Connecticut Shade</p>
-                                
+                                  <?php if(rwmb_meta('single_product_qty')): ?>
+                                  
+                                  <h4>Single Product Count</h4>
+                                  <p><?php echo get_single_unit_qty(); ?></p>
+                                  
+                                  <?php endif; ?>
+                                  
                                 </div>
                               </div>
                             </div>
@@ -145,3 +192,5 @@
     </div>
   </div>
 </section>
+  
+  

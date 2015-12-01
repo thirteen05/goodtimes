@@ -7,6 +7,7 @@
         <script src="<?php echo get_stylesheet_directory_uri(); ?>/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
         <script src="<?php echo get_stylesheet_directory_uri(); ?>/bower_components/jquery.stellar/jquery.stellar.min.js"></script>
         <script src="<?php echo get_stylesheet_directory_uri(); ?>/bower_components/Scrollify/jquery.scrollify.min.js"></script>
+        <script src="<?php echo get_stylesheet_directory_uri(); ?>/bower_components/jquery-selectric/public/jquery.selectric.min.js"></script>
         <script src="<?php echo get_stylesheet_directory_uri(); ?>/masterslider/masterslider.min.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/plugins.js"></script>
         <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/main.js"></script>
@@ -22,75 +23,18 @@
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script>
 
-
-
-
-        <script>
-
-          $(document).ready(function() {
-            $("#carousel-home-brands").on("slid", function() {
-              
-              var to_slide;
-              to_slide = $("#carousel-home-brands >.item.active").attr("data-slide-to");
-              
-              $(".carousel-brand-indicator.active").removeClass("active");
-              $(".carousel-brand-indicator li[data-slide-to=" + to_slide + "]").addClass("active");
-            });
-            
-            $(".carousel-brand-indicator").on("click", function() {
-              $(this).preventDefault();
-              $("#carousel-home-brands").carousel(parseInt($(this).attr("data-slide-to")));
-              $(".carousel-brand-indicator.active").removeClass("active");
-              $(this).addClass("active");
-            });
-            
-          });
-          
-          var $carousel = $('#carousel-home-brands');
-          $carousel.carousel();
-          var handled=false;//global variable
-
-          $carousel.bind('slide.bs.carousel', function (e) {
-            
-              var current=$(e.target).find('.item.active');
-              var indx=$(current).index();
-              
-              /*current.find('.carousel-pouch').removeClass('show-pouch');
-            
-              $(e.relatedTarget).find('.carousel-pouch').addClass('show-pouch');*/
-            
-              if((indx+2)>$('.carousel-indicators li').length)
-                  indx=-1
-               if(!handled)
-               {
-                  $('.carousel-brand-indicator').removeClass('active')
-                  $('.carousel-brand-indicator:nth-child('+(indx+2)+')').addClass('active');
-               }
-               else
-               {
-                  handled=!handled;//if handled=true make it back to false to work normally.
-               }
-          });
-
-          $(".carousel-brand-indicator").on('click',function(){
-             //Click event for indicators
-             $(this).addClass('active').siblings().removeClass('active');
-             //remove siblings active class and add it to current clicked item
-             handled=true; //set global variable to true to identify whether indicator changing was handled or not.
-          });
-
-        </script>
-
-        <?php if(!is_category()): ?>
+        <?php if(is_home() || is_page('Our Values')): ?>
 
         <script>
           
-              if($(window).innerWidth() > 480){
+              if($(window).innerWidth() > 1024){
                 
                 $(function() {
 					$.scrollify({
 						section : ".scrollify-section",
+                        //scrollbars: false
 					});
+                  
 				});
                 
                 $.stellar();
@@ -100,35 +44,6 @@
         </script>
 
         <?php endif; ?>
-
-        <script>
-
-          $(document).ready(function() {
-
-            /* Every time the window is scrolled ... */
-            $(window).scroll( function(){
-
-                /* Check the location of each desired element */
-                $('.off-Screen').each( function(i){
-
-                    var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-                    var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-                    /* If the object is completely visible in the window, fade it it */
-                    if( bottom_of_window > bottom_of_object ){
-
-                        $(this).removeClass('off-Screen');
-                        $(this).addClass('animate slideInRight');
-
-                    }
-                }); 
-
-            });
-
-        });
-
-
-        </script>
 
 
         <script>
@@ -156,131 +71,49 @@
         </script>
 
         <script>
-
-          $('#carousel-values').on('slide.bs.carousel',function(){
+          
+          $('#brand-category-select').change(function(){
+            var selection = $(this).find('option:selected').val();
             
-            var activeSlide = $(this).find('.item.active');
-            var slideNumber = activeSlide.attr('data-slide-number');
-            
-            if(slideNumber == 1){
-              
-              $('#core-value-span').fadeOut('slow',function(){
-                $('#core-value-span').text('FRESHNESS');
-              });
-              
-              $('#core-value-span').fadeIn();
-              
-            }
-            
-            if(slideNumber == 2){
-              
-              $('#core-value-span').fadeOut('slow',function(){
-                $('#core-value-span').text('QUALITY');
-              });
-              
-              $('#core-value-span').fadeIn();
-              
-            }
-            
-            if(slideNumber == 3){
-              
-              $('#core-value-span').fadeOut('slow',function(){
-                $('#core-value-span').text('INNOVATION');
-              });
-              
-              $('#core-value-span').fadeIn();
-              
-            }
-            
-            if(slideNumber == 4){
-              
-              $('#core-value-span').fadeOut('slow',function(){
-                $('#core-value-span').text('VALUE');
-              });
-              
-              $('#core-value-span').fadeIn();
-              
-            }
-            
-            if(slideNumber == 5){
-              
-              $('#core-value-span').fadeOut('slow',function(){
-                $('#core-value-span').text('FLAVOR');
-              });
-              
-              $('#core-value-span').fadeIn();
-              
+            switch(selection) {
+                case 'good-times':
+                    window.location.assign('<?php echo get_home_url(); ?>/category/good-times');
+                    break;
+                case 'hd':
+                     window.location.assign('<?php echo get_home_url(); ?>/category/hd');
+                    break;
+                case '4k':
+                     window.location.assign('<?php echo get_home_url(); ?>/category/4k');
+                    break;
+                case 'flat-wrap':
+                     window.location.assign('<?php echo get_home_url(); ?>/category/flat-wrap');
+                    break;
+                case 'sweet-woods':
+                     window.location.assign('<?php echo get_home_url(); ?>/category/sweet-woods');
+                    break;
+                case 'little-wild':
+                     window.location.assign('<?php echo get_home_url(); ?>/category/little-wild');
+                    break;
+                case 'double-7':
+                     window.location.assign('<?php echo get_home_url(); ?>/category/double-7s');
+                    break;
+                case 'remington':
+                     window.location.assign('<?php echo get_home_url(); ?>/category/remington');
+                    break;
+                case 'mini':
+                     window.location.assign('<?php echo get_home_url(); ?>/category/mini');
+                    break;
+                default:
+                    //default code block
             }
             
           });
           
-
-        </script>
-
-<script>
-
-   var angle = 0;
-    function galleryspin(sign) { 
-    spinner = document.querySelector("#spinner");
-    if (!sign) { angle = angle + 45; } else { angle = angle - 45; }
-    spinner.setAttribute("style","-webkit-transform: rotateY("+ angle +"deg); -moz-transform: rotateY("+ angle +"deg); transform: rotateY("+ angle +"deg);");
-    }
-
-</script>
-
-	<script type="text/javascript">	
-
-		var slider = new MasterSlider();
-		slider.setup('masterslider' , {
-			loop:true,
-			width:150,
-			height:400,
-			speed:20,
-			view:'flow',
-			preload:0,
-			space:0,
-			wheel:true,
-            preload: 'all',
-            keyboard: true
-		});
-		slider.control('arrows');
-		slider.control('slideinfo',{insertTo:'#staff-info'});
-		
-	</script>
-
-
-    <script type="text/javascript">       
- 
-      var slider2 = new MasterSlider();
-
-          slider2.control('arrows');   
-          slider2.control('circletimer' , {color:"#FFFFFF" , stroke:9});
-          slider2.control('thumblist' , {autohide:false ,dir:'h', type:'tabs',width:80,height:120, align:'bottom', space:0 , margin:-12, hideUnder:400});
-
-          slider2.setup('masterslider2' , {
-              width:960,
-              height:400,
-              space:0,
-              preload:'all',
-              view:'basic',
-              loop: true,
-              wheel: true,
-              keyboard: true,
-              view: 'fade'
+          $(function(){
+            $('#brand-category-select').selectric();
           });
-
-    </script>
-
-    <script>
-        
-      $('.ms-slide').click(function(){
-        
-        var slideNumber = $(this).attr('data-slide-number');
-        slider2.api.gotoSlide( slideNumber - 1 ); 
-        
-      });
-      
-    </script>
+          
+        </script>
 
 
         <?php wp_footer(); ?>

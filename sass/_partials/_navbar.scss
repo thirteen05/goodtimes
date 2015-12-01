@@ -3,6 +3,10 @@
   border: none;
   transition: all .5s;
   
+  &.navbar-dark{
+    background-color: rgba(0,0,0,0.8)!important;  
+  }
+  
   .navbar-collapse{
     border: none;
   }
@@ -40,5 +44,119 @@
       height: 50px;
       
     }
+  }
+  
+  #menu-main-nav-1{
+    
+    li{
+      
+      .dropdown-menu{
+        border: none;
+        border-radius: 0;
+        background-color: rgba(0,0,0,0.8);
+        
+        li{
+          
+          a{
+            font-size: 20px;
+            
+            &:hover{
+              background-color: rgba(0,0,0,0.9);
+              color: #FFF;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#mobile-nav-toggle{
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  padding: 8px 10px;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 2500;
+  
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+#mobile-nav{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 2750;
+  text-align: center;
+  display: none;
+  
+  ul#menu-main-nav{
+    list-style-type: none;
+    padding-left: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -moz-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    
+    li{
+      font-size: 28px;
+      font-family: $hFont;
+      
+      a{
+        color: $yellow;
+        
+        &:hover, &:active, &:focus{
+          text-decoration: none;
+        }
+      }
+      
+      .sub-menu{
+        list-style-type: none;
+        padding: 0;
+        display: none;
+        
+        li{
+          font-size: 16px;
+          
+          a{
+            color: #FFF!important;
+          }
+        }
+      }
+    }
+  }
+  
+  #mobile-nav-close{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    color: $yellow;
+    font-size: 20px;
+    font-family: $hFont;
+    
+    &:hover{
+      cursor: pointer;
+      
+    }
+  }
+}
+
+@media(max-width: 996px){
+  #goodtimes-navbar{
+    display: none;
+  }
+}
+
+@media(min-width: 996px){
+  #mobile-nav-toggle{
+    display: none;
   }
 }

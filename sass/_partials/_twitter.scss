@@ -21,7 +21,6 @@
     .tweet-content{
       background-color: rgba(0,0,0,0.8);
       padding: 10px;
-      margin-bottom: 20px;
       
       a{
         color: $yellow;
@@ -58,10 +57,24 @@
         background-color: rgba(0,0,0,0.8);
         padding: 10px;
         min-height: 200px;
-        margin-bottom: 20px;
 
         a{
           color: $yellow;
+        }
+        
+      }
+      
+      .tweet-meta{
+        margin-bottom: 20px;
+        padding: 5px;
+        background-color: $yellow;
+        
+        p{
+          margin: 0;
+          color: $charcoal;
+          font-size: 14px;
+          text-transform: uppercase;
+          font-weight: 600;
         }
       }
     }

@@ -1,4 +1,46 @@
-.col-md-3.instagram-pic-wrapper{
+.instagram-pic-wrapper{
+  
+  .instagram-overlay{
+
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      text-align: center;
+      display: none;
+      
+      p{
+        font-family: $hFont;
+        color: #FFF;
+        margin: 0;
+      }
+      
+      .fa{
+        color: $yellow;
+      }
+      
+      .instagram-center-wrapper{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        -webkit-transform: translateY(-50%) translateX(-50%);
+        -moz-transform: translateY(-50%) translateX(-50%);
+        -ms-transform: translateY(-50%) translateX(-50%);
+        width: 100%;
+        background-color: $charcoal;
+        padding: 20px 8px;
+        
+        
+        
+      }
+
+    }
+  
+  height: 262px;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 15px;
   
   &:nth-of-type(2),
   &:nth-of-type(3),
@@ -9,7 +51,7 @@
 
 @media(min-width: 768px){
   
-  .col-md-3.instagram-pic-wrapper{
+  .instagram-pic-wrapper{
     -webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
     -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
     box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
@@ -19,5 +61,43 @@
     &:nth-of-type(4){
       display: inherit;
     }
+    
+    .instagram-overlay{
+
+      position: absolute;
+      width: 100%;
+      height: 100%;
+       background-color: rgba(0,0,0,0.8);
+      text-align: center;
+      display: none;
+      
+      p{
+        font-family: $hFont;
+        color: #FFF;
+        margin: 0;
+      }
+      
+      .fa{
+        color: $yellow;
+      }
+      
+      .instagram-center-wrapper{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        -webkit-transform: translateY(-50%) translateX(-50%);
+        -moz-transform: translateY(-50%) translateX(-50%);
+        -ms-transform: translateY(-50%) translateX(-50%);
+        width: 100%;
+        background-color: $charcoal;
+        padding: 20px 8px;
+        
+        
+        
+      }
+
+    }
+    
   }
 }

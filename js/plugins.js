@@ -22,3 +22,67 @@
 }());
 
 // Place any jQuery/helper plugins in here.
+
+      var slider = new MasterSlider();
+
+		slider.setup('masterslider' , {
+			loop:true,
+			width:150,
+			height:400,
+			speed:20,
+			view:'flow',
+			preload:0,
+			space:0,
+			wheel:true,
+            preload: 'all',
+            keyboard: true
+		});
+		slider.control('arrows');
+		slider.control('slideinfo',{insertTo:'#staff-info'});
+
+
+      var slider2 = new MasterSlider();
+
+          slider2.control('arrows');   
+          slider2.control('circletimer' , {color:"#FFFFFF" , stroke:9});
+          slider2.control('thumblist' , {autohide:false ,dir:'h', type:'tabs',width:80,height:120, align:'bottom', space:0 , margin:-12, hideUnder:400});
+
+          slider2.setup('masterslider2' , {
+              width:960,
+              height:400,
+              space:0,
+              preload:'all',
+              view:'basic',
+              loop: true,
+              wheel: true,
+              keyboard: true,
+              view: 'fade'
+          });
+
+      var slider3 = new MasterSlider();
+
+		slider3.setup('home-mobile-brand-slider' , {
+			loop:true,
+			width:200,
+			height:200,
+			speed:20,
+			view:'flow',
+			preload:0,
+			space:0,
+            autoplay: true,
+            wheel: false
+		});
+		slider3.control('arrows');
+
+		$('#myTab a').click(function (e) {
+		  e.preventDefault()
+		  $(this).tab('show')
+		});
+
+
+      $('#masterslider .ms-slide').click(function(){
+        
+        var slideNumber = $(this).attr('data-slide-number');
+        slider2.api.gotoSlide( slideNumber - 1 ); 
+        
+      });

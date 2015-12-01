@@ -8,7 +8,7 @@
             Mission Statement
           </h3>
           <p class="font-white text-left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus enim ac ultricies venenatis. Curabitur odio est, pulvinar id aliquam quis, facilisis non diam. Fusce vulputate iaculis pulvinar. Donec ac nisi eleifend, egestas nisl ut, euismod quam. Nam interdum ligula a pulvinar sodales. In suscipit nec mi sed eleifend. Suspendisse tincidunt sagittis lectus, non vehicula arcu scelerisque ac.
+            <span class="font-yellow">Good Times USA</span> was founded with unmatched entrepreneurial spirit and ever since, has aimed to earn market leadership with Quality products.  At our heart lies the differential Innovation that HAS and WILL continue to shape the tobacco industry.  With this focus in mind, we persist in delivering new Flavorful experiences to our consumers.  Our products are undeniably unique, Guaranteed Fresh, and bring Value to every transaction level.  
           </p>
         </div>
       </div>
@@ -16,13 +16,13 @@
         <div id="core-values">
           <div id="carousel-values" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
-            <ol class="carousel-indicators">
+<!--            <ol class="carousel-indicators">
               <li data-target="#carousel-values" data-slide-to="0" class="active"></li>
               <li data-target="#carousel-values" data-slide-to="1"></li>
               <li data-target="#carousel-values" data-slide-to="2"></li>
               <li data-target="#carousel-values" data-slide-to="3"></li>
               <li data-target="#carousel-values" data-slide-to="4"></li>
-            </ol>
+            </ol>-->
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
@@ -69,37 +69,5 @@
         </h3>
       </div>
     </div>
-    <div class="row hidden-xs">
-      <div class="values-logo-wrap">
-        <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Brands-Good-Times.svg"/>
-      </div>
-      <div class="values-logo-wrap">
-        <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Brands-Little-Wild.svg"/>
-      </div>
-      <div class="values-logo-wrap">
-        <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Brands-Sweet-Woods.svg"/>
-      </div>
-      <div class="values-logo-wrap">
-        <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Brands-HD.svg"/>
-      </div>
-      <div class="values-logo-wrap">
-        <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Brands-Good-Times.svg"/>
-      </div>
-      <div class="values-logo-wrap">
-        <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Brands-Good-Times.svg"/>
-      </div>
-      <div class="values-logo-wrap">
-        <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Brands-Good-Times.svg"/>
-      </div>
-      <div class="values-logo-wrap">
-        <img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/Brands-Good-Times.svg"/>
-      </div>
-
-    </div>
-<!--    <div class="row">
-      <div class="col-md-4 col-md-offset-4 text-center">
-        <button class="btn btn-primary btn-lg btn-block">Contact Us</button>
-      </div>
-    </div>-->
   </div>
 </section>

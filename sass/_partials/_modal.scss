@@ -16,6 +16,15 @@
         padding-bottom: 0;
         border: 0;
       }
+      
+/*      .modal-body{
+        background-image: url(images/Cutout-BG.png);
+        background-color: transparent;
+        background-size: cover;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+      }*/
     }
     
     #masterslider2{
@@ -75,21 +84,29 @@
   }
 }
 
-.modal {
-  text-align: center;
-  padding: 0!important;
-}
+@media(min-width: 1024px){
+  
+  .modal {
+    text-align: center;
+    padding: 0!important;
+    
+    h4{
+      font-size: 28px;
+    }
+  }
 
-.modal:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  margin-right: -4px; /* Adjusts for spacing */
-}
+  .modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px; /* Adjusts for spacing */
+  }
 
-.modal-dialog {
-  display: inline-block;
-  text-align: left;
-  vertical-align: middle;
+  .modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+  }
+  
 }
