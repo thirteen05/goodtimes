@@ -13,7 +13,7 @@
         </div>
       </div>
       <div class="col-md-6">
-        <div id="core-values">
+        <div id="core-values" class="text-center">
           <div id="carousel-values" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
 <!--            <ol class="carousel-indicators">
@@ -63,7 +63,9 @@
         <h3 class="font-yellow text-shadow">
           See How Our
         </h3>
+        <a href="<?php echo get_site_url(); ?>/our-values">
           <button class="btn btn-primary btn-block"><span id="core-value-span" class="font-white text-shadow">Flavor</span></button>
+        </a>
         <h3 class="font-yellow text-shadow">
           Creates a Superior Smoke
         </h3>

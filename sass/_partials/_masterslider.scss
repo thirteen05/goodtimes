@@ -110,7 +110,7 @@
 #staff-info{
   max-width: 100%;
   height: auto;
-  min-height: 300px;
+  min-height: 450px;
 }
 
 .ms-staff-carousel .ms-nav-next{
@@ -125,6 +125,19 @@
   background-image: url(images/Pouch-Slider-Nav-Left.svg)!important;
   background-size: cover;
   background-position: center center!important;
+}
+
+#masterslider-testimonials{
+  .ms-view{
+    background-color: transparent;
+    
+    .ms-slide{
+      
+      p{
+        font-size: 1.5rem;
+      }
+    }
+  }
 }
 
 @media(min-width: 1200px){

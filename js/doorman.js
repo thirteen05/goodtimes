@@ -24,7 +24,7 @@ var DoorMan = (function ($) {
 
   //Create Year Dropdown
 
-  for (i = 1900; i <= year; i++) {
+  for (i = year; i >= 1900; i--) {
     $('#dm-age-year').append("<option value='" + i + "'>" + i + "</option>");
 
   };
@@ -62,11 +62,12 @@ var DoorMan = (function ($) {
     var ageYears = ageDay / 365.25;
 
     if (ageYears > 17.999) {
-      sessionStorage.age = ageYears;
       $('#age-verify-wrapper').fadeOut();
       $('html').removeClass('scroll-lock');
+      sessionStorage.age = ageYears;
     } else{
       sessionStorage.age = ageYears;
+      $('#dm-verify-message').text('You must be over 18 years of age to enter this site.');
     }
 
   });

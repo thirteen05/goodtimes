@@ -13,7 +13,6 @@
           <option value="double-7">Double 7's</option>
           <option value="sweet-woods">Sweet Woods</option>
           <option value="remington">Remington</option>
-          <option value="mini">Mini</option>
         </select>
       </div>
       
@@ -69,18 +68,24 @@
                       
                         <table class="table hidden-sm hidden-md hidden-lg" id="mobile-product-table">
                           <tbody>
+                            
                             <tr>
                               <td class="table-left">Product Type:</td>
                               <td><?php echo get_product_type(); ?></td>
                             </tr>
+                            
                             <tr>
                               <td class="table-left">Description:</td>
                               <td><?php echo rwmb_meta('brand_description'); ?></td>
                             </tr>
-                            <tr>
-                              <td class="table-left">Ring Gauge:</td>
-                              <td><?php echo get_ring_gauge(); ?></td>
-                            </tr>
+                            
+                              <?php if(rwmb_meta('ring_gauge')): ?>
+                                <tr>
+                                  <td class="table-left">Ring Gauge:</td>
+                                  <td><?php echo get_ring_gauge(); ?></td>
+                                </tr>
+                            <?php endif; ?>
+                            
                           </tbody>
                         </table>
 			        </div>     
@@ -102,7 +107,7 @@
             <div class="modal-content">
               <div class="modal-header text-center">
               
-                <img width="200" src="<?php echo get_category_logo(); ?>" />
+                <img width="200" src="<?php echo get_category_logo_modal(); ?>" />
                 <img width="40" type="button" data-dismiss="modal" aria-label="Close" src="<?php echo get_template_directory_uri(); ?>/images/Modal-Close-Button.svg" style="position: absolute; top: 15px; right: 15px; cursor: pointer" />
               
               </div>
@@ -140,7 +145,6 @@
                                   
                                   <?php endif; ?>
                                   
-                                  <img width="200" src="<?php echo get_template_directory_uri(); ?>/images/Good-Times-Logo.svg" />
                                   
                                 </div>
                                 <div class="col-md-4">
@@ -187,8 +191,14 @@
             </div>
           </div>
         </div>
-        
-        
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center" style="padding-bottom: 80px;">
+        <h4 class="font-bevan font-white text-shadow">Web Design by <a class="font-yellow" href="http://www.thirteen05.com" target="_blank">thirteen05 creative</a></h4>
+      </div>
     </div>
   </div>
 </section>

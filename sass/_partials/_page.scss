@@ -46,3 +46,11 @@
   }
   
 }
+
+@media(max-width: 768px){
+    
+  #int-page-wrapper #brand-sidebar-list a > li {
+    display: inline-block
+    
+  }
+}

@@ -86,3 +86,24 @@
         slider2.api.gotoSlide( slideNumber - 1 ); 
         
       });
+
+      var sliderTestimonials = new MasterSlider();
+
+		sliderTestimonials.setup('masterslider-testimonials' , {
+			loop:true,
+			width:750,
+            height: 100,
+			speed:20,
+			view:'basic',
+			preload:0,
+			space:0,
+            autoplay: true,
+            wheel: false,
+            autoheight: true
+		});
+		sliderTestimonials.control('bullets');
+
+		$('#myTab a').click(function (e) {
+		  e.preventDefault()
+		  $(this).tab('show')
+		});

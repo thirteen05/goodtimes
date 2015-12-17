@@ -1,0 +1,43 @@
+#age-verify-wrapper #age-verify-center{
+-webkit-transform: translateX(-50%) translateY(-50%);
+}
+#section-home-values #values-top-wrapper .row :nth-of-type(2).col-md-6 #core-values #carousel-values img, #section-home-values #values-top-wrapper .row :first-of-type.col-md-6 #mission-statement img{
+    width: 100%;
+}
+#section-home-values{
+    padding-top: 1%;
+}
+@media(min-width: 1025px){
+    .menu-item-has-children a{
+        pointer-events: none;
+    }
+    .menu-item-has-children ul a{
+        pointer-events: all;
+    }
+}
+@media(max-width: 1024px){
+    #masterslider-testimonials .ms-view .ms-slide p{
+        font-size: 1.3rem;
+        margin-bottom: 0;
+    }
+    #section-home-dark .row .col-md-6.text-column p{
+        font-size: 16px;
+    }
+    #section-home-dark, #section-home-values #values-top-wrapper, #section-home-values, #section-home-top #home-top-brands-wrapper, #section-home-roll{
+        height: auto;
+    }
+    #section-home-values #values-bottom-wrapper{
+        padding-top: 0;
+    }
+    #section-home-top #home-top-testimonial-wrapper{
+        min-height: 0;
+    }
+}
+@media (max-width: 320px){
+    #age-verify-wrapper #age-verify-center{
+        top: 0;
+        left: 0;
+        transform: translateX(0) translateY(0);
+        -webkit-transform: translateX(0) translateY(0);
+    }
+}

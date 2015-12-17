@@ -9,6 +9,8 @@ register_nav_menus( array(
 
 require_once("twitteroauth/autoload.php");
 require_once("instagram-api/src/Instagram.php");
+require_once("constant_contact/src/Ctct/autoload.php");
+
 
 add_action( 'init', 'product_cpt_init' );
 /**
@@ -126,6 +128,52 @@ function get_category_logo(){
   
 }
 
+function get_category_logo_modal(){
+  
+  $logo_url = '';
+  
+  if(is_category('4K') || has_category('4K')):
+  
+    $logo_url = get_template_directory_uri().'/images/category-modal-logos/Modal-Logo-4K.png';
+      
+  elseif(is_category('Good Times') || has_category('Good Times')):
+  
+    $logo_url = get_template_directory_uri().'/images/category-modal-logos/Modal-Logo-Good-Times.png';
+      
+  elseif(is_category('Flat Wrap') || has_category('Flat Wrap')):
+  
+    $logo_url = get_template_directory_uri().'/images/category-modal-logos/Modal-Logo-Flat-Wrap.png';
+      
+  elseif(is_category('Sweet Woods') || has_category('Sweet Woods')):
+  
+    $logo_url = get_template_directory_uri().'/images/category-modal-logos/Modal-Logo-Sweet-Woods.png';
+      
+  elseif(is_category('Little &amp; Wild') || has_category('Little &amp; Wild')):
+  
+    $logo_url = get_template_directory_uri().'/images/category-modal-logos/Modal-Logo-Little-Wild.png';
+      
+  elseif(is_category('Remington') || has_category('Remington')):
+  
+    $logo_url = get_template_directory_uri().'/images/category-modal-logos/Modal-Logo-Remington.png';
+      
+  elseif(is_category('HD') || has_category('HD')):
+  
+    $logo_url = get_template_directory_uri().'/images/category-modal-logos/Modal-Logo-HD.png';
+      
+  elseif(is_category("Double 7's") || has_category("Double 7's")):
+  
+    $logo_url = get_template_directory_uri().'/images/category-modal-logos/Modal-Logo-Double-7s.png';
+  
+  else:
+  
+    $logo_url = get_template_directory_uri().'/images/category-modal-logos/Modal-Logo-Good-Times.png';
+      
+  endif;
+  
+  return $logo_url;
+  
+}
+
 add_theme_support( 'post-thumbnails' );
 
 
@@ -134,6 +182,49 @@ function get_cat_link_by_name($brand){
   $cat_id = get_cat_ID($brand);
   $link = get_category_link($cat_id);
   return $link; 
+  
+}
+
+function get_single_product_cat_link(){
+  
+  $cat_link = '';
+  
+  if(has_category('4K')):
+  
+    $cat_link = get_cat_link_by_name('4K');
+      
+  elseif(has_category('Good Times')):
+  
+    $cat_link = get_cat_link_by_name('Good Times');
+      
+  elseif(has_category('Flat Wrap')):
+  
+    $cat_link = get_cat_link_by_name('Flat Wrap');
+      
+  elseif(has_category('Sweet Woods')):
+  
+    $cat_link = get_cat_link_by_name('Sweet Woods');
+      
+  elseif(has_category('Little &amp; Wild')):
+  
+    $cat_link = get_cat_link_by_name('Little &amp; Wild');
+      
+  elseif(has_category('Remington')):
+  
+    $cat_link = get_cat_link_by_name('Remington');
+      
+  elseif(has_category('HD')):
+  
+    $cat_link = get_cat_link_by_name('HD');
+      
+  elseif(has_category("Double 7's")):
+  
+    $cat_link = get_cat_link_by_name("Double 7's");
+      
+  endif;
+  
+  return $cat_link;
+  
   
 }
 
@@ -269,8 +360,33 @@ function get_single_unit_qty(){
 
     endif;
   
+}
+
+function get_testimonials(){
   
+  $testimonials = array(
+    
+    array(
+      "body" => '"If you haven\'t tried <span class="font-yellow">Good Times Tobacco Products</span>, you are definitely missing out!"',
+      "author" => "Jed Darrohn",
+      "company" => "Jed Darrohn",
+    ),
+    
+    array(
+      "body" => '"We are having good luck with <span class="font-yellow">Good Times</span> cigarillo cigars. These are very hot right now."',
+      "author" => "Jed Darrohn",
+      "company" => "Jed Darrohn",
+    ),
+    
+    array(
+      "body" => '"A person I know recently gave me a blueberry flavored cigarillo to try. I loved it! A fan for life, Thank you."',
+      "author" => "Jed Darrohn",
+      "company" => "Jed Darrohn",
+    )
+    
+  );
   
+  return $testimonials;
   
 }
   

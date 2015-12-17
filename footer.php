@@ -1,4 +1,5 @@
 
+
         <?php get_template_part('partials/fixed-footer'); ?>
         <?php get_template_part('partials/social-media-bar'); ?>
 
@@ -99,9 +100,6 @@
                     break;
                 case 'remington':
                      window.location.assign('<?php echo get_home_url(); ?>/category/remington');
-                    break;
-                case 'mini':
-                     window.location.assign('<?php echo get_home_url(); ?>/category/mini');
                     break;
                 default:
                     //default code block

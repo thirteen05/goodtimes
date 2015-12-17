@@ -30,7 +30,7 @@
   
 }
 
-@media(min-height: 768px){
+@media(min-width: 768px){
   
   .tweet-list{
     
@@ -57,6 +57,7 @@
         background-color: rgba(0,0,0,0.8);
         padding: 10px;
         min-height: 200px;
+        word-break: break-word;
 
         a{
           color: $yellow;

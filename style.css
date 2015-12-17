@@ -54,13 +54,19 @@ h1, h2, h3, h4, h5, h6 {
 /* line 34, sass/_partials/_globals.scss */
 p {
   font-family: "Lato", Veranda, sans-serif;
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem; }
 
-/* line 39, sass/_partials/_globals.scss */
+/* line 42, sass/_partials/_globals.scss */
+a:hover {
+  text-decoration: none; }
+
+/* line 47, sass/_partials/_globals.scss */
 .text-shadow {
   text-shadow: 4px 3px 3px rgba(0, 0, 0, 0.5); }
 
-/* line 43, sass/_partials/_globals.scss */
+/* line 51, sass/_partials/_globals.scss */
 #loading {
   height: 100vh;
   width: 100vw;
@@ -70,7 +76,7 @@ p {
   top: 0;
   z-index: 3000;
   transition: all 1s; }
-  /* line 53, sass/_partials/_globals.scss */
+  /* line 61, sass/_partials/_globals.scss */
   #loading #spinner-wrapper {
     position: absolute;
     top: 50%;
@@ -80,19 +86,24 @@ p {
     -moz-transform: translateX(-50%) translateY(-50%);
     -ms-transform: translateX(-50%) translateY(-50%);
     text-align: center; }
-    /* line 63, sass/_partials/_globals.scss */
+    /* line 71, sass/_partials/_globals.scss */
     #loading #spinner-wrapper img {
       display: block;
-      max-width: 150px;
-      margin-bottom: 15px; }
-  /* line 74, sass/_partials/_globals.scss */
+      width: 150px;
+      margin-bottom: 15px;
+      height: 40px; }
+  /* line 83, sass/_partials/_globals.scss */
   #loading.hide-load {
     opacity: 0;
     z-index: 0; }
 
-/* line 81, sass/_partials/_globals.scss */
+/* line 90, sass/_partials/_globals.scss */
 .btn:focus, .btn:active {
   outline: none !important; }
+
+/* line 95, sass/_partials/_globals.scss */
+.scrollify-section {
+  overflow: hidden; }
 
 @-webkit-keyframes rotating /* Safari and Chrome */ {
   from {
@@ -120,7 +131,7 @@ p {
     -webkit-transform: rotate(360deg);
     -o-transform: rotate(360deg);
     transform: rotate(360deg); } }
-/* line 118, sass/_partials/_globals.scss */
+/* line 131, sass/_partials/_globals.scss */
 .rotating {
   -webkit-animation: rotating 2s linear infinite;
   -moz-animation: rotating 2s linear infinite;
@@ -142,7 +153,7 @@ p {
   /* line 18, sass/_partials/_navbar.scss */
   #goodtimes-navbar .navbar-nav li a {
     font-family: "Roboto Slab", Times New Roman, serif;
-    font-size: 28px;
+    font-size: 24px;
     text-shadow: 4px 3px 3px rgba(0, 0, 0, 0.5);
     color: #fcc328 !important;
     transition: all .5s; }
@@ -208,7 +219,7 @@ p {
     -ms-transform: translateY(-50%) translateX(-50%); }
     /* line 109, sass/_partials/_navbar.scss */
     #mobile-nav ul#menu-main-nav li {
-      font-size: 28px;
+      font-size: 24px;
       font-family: "Roboto Slab", Times New Roman, serif; }
       /* line 113, sass/_partials/_navbar.scss */
       #mobile-nav ul#menu-main-nav li a {
@@ -239,12 +250,16 @@ p {
     #mobile-nav #mobile-nav-close:hover {
       cursor: pointer; }
 
-@media (max-width: 996px) {
+@media (max-width: 1024px) {
   /* line 153, sass/_partials/_navbar.scss */
   #goodtimes-navbar {
-    display: none; } }
-@media (min-width: 996px) {
-  /* line 159, sass/_partials/_navbar.scss */
+    display: none; }
+
+  /* line 157, sass/_partials/_navbar.scss */
+  #mobile-nav ul#menu-main-nav li {
+    font-size: 24px; } }
+@media (min-width: 1025px) {
+  /* line 163, sass/_partials/_navbar.scss */
   #mobile-nav-toggle {
     display: none; } }
 /* line 1, sass/_partials/_modal.scss */
@@ -362,30 +377,33 @@ p {
       border-left: 3px double white;
       line-height: 1; }
   /* line 38, sass/_partials/_home.scss */
+  #section-home-top #home-top-brands-wrapper {
+    padding: 15px; }
+  /* line 42, sass/_partials/_home.scss */
   #section-home-top #home-brands-wrapper {
     background-image: url(images/Good-Times-Tobacco-Concrete-BG.jpg);
     background-size: cover; }
-    /* line 42, sass/_partials/_home.scss */
+    /* line 46, sass/_partials/_home.scss */
     #section-home-top #home-brands-wrapper .container {
       height: 100%; }
-      /* line 45, sass/_partials/_home.scss */
+      /* line 49, sass/_partials/_home.scss */
       #section-home-top #home-brands-wrapper .container .row {
         height: 100%; }
-        /* line 48, sass/_partials/_home.scss */
+        /* line 52, sass/_partials/_home.scss */
         #section-home-top #home-brands-wrapper .container .row #home-top-pouch-background-wrapper {
           background-image: url(images/Home-Top-Pouch-Background.png);
           height: 100%; }
-        /* line 53, sass/_partials/_home.scss */
+        /* line 57, sass/_partials/_home.scss */
         #section-home-top #home-brands-wrapper .container .row .col-md-3 {
           height: 15vh;
           background-size: contain;
           background-position: center center;
           background-repeat: no-repeat;
           padding: 0; }
-          /* line 60, sass/_partials/_home.scss */
+          /* line 64, sass/_partials/_home.scss */
           #section-home-top #home-brands-wrapper .container .row .col-md-3 a {
             color: #232021 !important; }
-          /* line 64, sass/_partials/_home.scss */
+          /* line 68, sass/_partials/_home.scss */
           #section-home-top #home-brands-wrapper .container .row .col-md-3 .home-brand-overlay {
             height: 100%;
             width: 100%;
@@ -394,7 +412,7 @@ p {
             opacity: 0;
             position: relative;
             z-index: 500; }
-            /* line 73, sass/_partials/_home.scss */
+            /* line 77, sass/_partials/_home.scss */
             #section-home-top #home-brands-wrapper .container .row .col-md-3 .home-brand-overlay h5 {
               position: absolute;
               top: 50%;
@@ -404,47 +422,49 @@ p {
               -moz-transform: translatey(-50%);
               -ms-transform: translatey(-50%);
               font-size: 20px; }
-            /* line 84, sass/_partials/_home.scss */
+            /* line 88, sass/_partials/_home.scss */
             #section-home-top #home-brands-wrapper .container .row .col-md-3 .home-brand-overlay:hover {
               opacity: 1; }
-        /* line 90, sass/_partials/_home.scss */
+        /* line 94, sass/_partials/_home.scss */
         #section-home-top #home-brands-wrapper .container .row .col-md-12 {
           height: 100%; }
-          /* line 93, sass/_partials/_home.scss */
+          /* line 97, sass/_partials/_home.scss */
           #section-home-top #home-brands-wrapper .container .row .col-md-12 #carousel-home-brands {
             height: 100%; }
-            /* line 96, sass/_partials/_home.scss */
+            /* line 100, sass/_partials/_home.scss */
             #section-home-top #home-brands-wrapper .container .row .col-md-12 #carousel-home-brands .carousel-inner {
               height: 100%; }
-              /* line 99, sass/_partials/_home.scss */
+              /* line 103, sass/_partials/_home.scss */
               #section-home-top #home-brands-wrapper .container .row .col-md-12 #carousel-home-brands .carousel-inner .item {
                 height: 100%; }
-                /* line 102, sass/_partials/_home.scss */
+                /* line 106, sass/_partials/_home.scss */
                 #section-home-top #home-brands-wrapper .container .row .col-md-12 #carousel-home-brands .carousel-inner .item .carousel-pouch {
                   transition: all 1s; }
-  /* line 114, sass/_partials/_home.scss */
+  /* line 118, sass/_partials/_home.scss */
   #section-home-top #home-top-testimonial-wrapper {
     background-color: #232021 !important;
-    padding: 15px 0; }
-    /* line 118, sass/_partials/_home.scss */
+    padding: 15px 0;
+    min-height: 150px; }
+    /* line 123, sass/_partials/_home.scss */
     #section-home-top #home-top-testimonial-wrapper h2 {
       font-size: 16px; }
 
-/* line 124, sass/_partials/_home.scss */
+/* line 129, sass/_partials/_home.scss */
 #section-home-dark {
   background-image: url(images/asfalt.png); }
-  /* line 129, sass/_partials/_home.scss */
+  /* line 134, sass/_partials/_home.scss */
   #section-home-dark .row .col-md-6 {
     position: relative;
     padding: 15px; }
-    /* line 133, sass/_partials/_home.scss */
-    #section-home-dark .row .col-md-6 img {
-      max-width: 100%;
-      height: auto; }
     /* line 138, sass/_partials/_home.scss */
+    #section-home-dark .row .col-md-6 img {
+      max-width: 80%;
+      height: auto; }
+    /* line 143, sass/_partials/_home.scss */
     #section-home-dark .row .col-md-6 h3 {
-      font-size: 24px; }
-  /* line 144, sass/_partials/_home.scss */
+      font-size: 24px;
+      margin-bottom: 15px; }
+  /* line 150, sass/_partials/_home.scss */
   #section-home-dark .btn.btn-primary {
     border: 3px double #fcc328 !important;
     background-color: transparent;
@@ -454,48 +474,68 @@ p {
     margin-top: 15px;
     padding: 15px;
     transition: all .5s; }
-    /* line 154, sass/_partials/_home.scss */
+    /* line 160, sass/_partials/_home.scss */
     #section-home-dark .btn.btn-primary:hover {
       transform: scale(1.1, 1.1);
       background-color: #fcc328 !important;
       color: #232021 !important;
       border-color: #232021 !important; }
 
-/* line 163, sass/_partials/_home.scss */
+@media (max-height: 768px) {
+  /* line 170, sass/_partials/_home.scss */
+  #section-home-dark .row .col-md-6 {
+    text-align: center; } }
+/* line 175, sass/_partials/_home.scss */
 #section-home-values {
   background-image: url(images/Good-Times-Tobacco-Plant-BG.jpg);
-  background-position: center center; }
-  /* line 169, sass/_partials/_home.scss */
-  #section-home-values #values-top-wrapper .row {
-    height: 100%; }
-    /* line 176, sass/_partials/_home.scss */
-    #section-home-values #values-top-wrapper .row .col-md-6:first-of-type #mission-statement {
-      width: 400px;
-      height: 400px;
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 30px;
-      text-align: center;
-      border: 3px double #fcc328 !important; }
-      /* line 184, sass/_partials/_home.scss */
-      #section-home-values #values-top-wrapper .row .col-md-6:first-of-type #mission-statement p {
-        font-size: 1rem; }
-  /* line 203, sass/_partials/_home.scss */
+  background-position: center center;
+  background-size: cover; }
+  /* line 180, sass/_partials/_home.scss */
+  #section-home-values #values-top-wrapper {
+    padding-top: 10vh; }
+    /* line 183, sass/_partials/_home.scss */
+    #section-home-values #values-top-wrapper .row {
+      height: 100%; }
+      /* line 190, sass/_partials/_home.scss */
+      #section-home-values #values-top-wrapper .row .col-md-6:first-of-type #mission-statement {
+        width: 90%;
+        height: auto;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 30px;
+        text-align: center;
+        border: 3px double #fcc328 !important;
+        margin: 0 auto; }
+        /* line 199, sass/_partials/_home.scss */
+        #section-home-values #values-top-wrapper .row .col-md-6:first-of-type #mission-statement img {
+          max-width: 50%;
+          margin-bottom: 20px; }
+        /* line 204, sass/_partials/_home.scss */
+        #section-home-values #values-top-wrapper .row .col-md-6:first-of-type #mission-statement p {
+          font-size: 1rem; }
+      /* line 214, sass/_partials/_home.scss */
+      #section-home-values #values-top-wrapper .row .col-md-6:nth-of-type(2) #core-values #carousel-values img {
+        max-width: 80%;
+        margin: 0 auto; }
+  /* line 228, sass/_partials/_home.scss */
+  #section-home-values #values-bottom-wrapper .btn .btn-primary .btn-block {
+    font-size: 24px; }
+  /* line 233, sass/_partials/_home.scss */
   #section-home-values #values-bottom-wrapper h3 {
-    font-size: 20px;
+    font-size: 8vw;
     margin-bottom: 15px; }
-    /* line 207, sass/_partials/_home.scss */
+    /* line 237, sass/_partials/_home.scss */
     #section-home-values #values-bottom-wrapper h3 #core-value-span {
       text-transform: uppercase; }
-  /* line 213, sass/_partials/_home.scss */
+  /* line 243, sass/_partials/_home.scss */
   #section-home-values #values-bottom-wrapper .row:nth-of-type(2) {
     padding-top: 30px;
     min-height: 100px; }
-    /* line 217, sass/_partials/_home.scss */
+    /* line 247, sass/_partials/_home.scss */
     #section-home-values #values-bottom-wrapper .row:nth-of-type(2) .values-logo-wrap {
       display: inline-block;
       width: 12%;
       position: relative; }
-      /* line 222, sass/_partials/_home.scss */
+      /* line 252, sass/_partials/_home.scss */
       #section-home-values #values-bottom-wrapper .row:nth-of-type(2) .values-logo-wrap img {
         max-width: 80%;
         position: absolute;
@@ -505,10 +545,10 @@ p {
         -webkit-transform: translateX(-50%) translateY(-50%);
         -moz-transform: translateX(-50%) translateY(-50%);
         -ms-transform: translateX(-50%) translateY(-50%); }
-        /* line 232, sass/_partials/_home.scss */
+        /* line 262, sass/_partials/_home.scss */
         #section-home-values #values-bottom-wrapper .row:nth-of-type(2) .values-logo-wrap img:nth-of-type(2) {
           max-width: 70%; }
-  /* line 239, sass/_partials/_home.scss */
+  /* line 269, sass/_partials/_home.scss */
   #section-home-values #values-bottom-wrapper .btn.btn-primary {
     border: 3px double #fcc328 !important;
     background-color: rgba(0, 0, 0, 0.8);
@@ -518,196 +558,223 @@ p {
     padding: 15px;
     transition: all .5s;
     margin-bottom: 15px; }
-    /* line 249, sass/_partials/_home.scss */
+    /* line 279, sass/_partials/_home.scss */
     #section-home-values #values-bottom-wrapper .btn.btn-primary:hover {
       transform: scale(1.1, 1.1);
       background-color: #fcc328 !important;
       color: #232021 !important;
       border-color: #232021 !important; }
 
-/* line 259, sass/_partials/_home.scss */
+/* line 289, sass/_partials/_home.scss */
 #section-home-roll {
-  background-image: url(images/Good-Times-Tobacco-Hangout.jpg); }
-  /* line 262, sass/_partials/_home.scss */
+  background-image: url(images/asfalt.png); }
+  /* line 292, sass/_partials/_home.scss */
   #section-home-roll h3 {
     margin-bottom: 30px;
     font-size: 2rem; }
 
-@media (min-width: 996px) {
-  /* line 270, sass/_partials/_home.scss */
+@media (max-height: 1024px) {
+  /* line 299, sass/_partials/_home.scss */
+  #section-home-roll {
+    padding-bottom: 10vh; } }
+@media (min-width: 768px) {
+  /* line 311, sass/_partials/_home.scss */
+  #section-home-top #home-brands-wrapper {
+    height: 30vh; }
+  /* line 315, sass/_partials/_home.scss */
+  #section-home-top .jumbotron {
+    height: 40vh; }
+    /* line 318, sass/_partials/_home.scss */
+    #section-home-top .jumbotron h1 {
+      font-size: 4vh; }
+
+  /* line 325, sass/_partials/_home.scss */
+  #section-home-values #values-bottom-wrapper h3 {
+    font-size: 2vw; } }
+@media (min-width: 1024px) {
+  /* line 335, sass/_partials/_home.scss */
   #section-home-top {
     background-color: #CCC; }
-    /* line 273, sass/_partials/_home.scss */
+    /* line 338, sass/_partials/_home.scss */
     #section-home-top .jumbotron {
       height: 40vh;
       background-image: url(images/Good-Times-Tobacco-Pouch-Background.jpg);
       margin-bottom: 0;
-      padding-top: 90px; }
-      /* line 279, sass/_partials/_home.scss */
+      padding-top: 10vh; }
+      /* line 344, sass/_partials/_home.scss */
       #section-home-top .jumbotron .btn.btn-primary {
         border: 3px double #fcc328 !important;
         background-color: transparent;
         font-family: "Roboto Slab", Times New Roman, serif;
         text-transform: uppercase;
         border-radius: 0;
-        margin-top: 30px;
-        padding: 15px;
+        margin-top: 2vh;
+        padding: 2vh;
         transition: all .5s; }
-        /* line 289, sass/_partials/_home.scss */
+        /* line 354, sass/_partials/_home.scss */
         #section-home-top .jumbotron .btn.btn-primary:hover {
           transform: scale(1.1, 1.1);
           background-color: #fcc328 !important;
           color: #232021 !important;
           border-color: #232021 !important; }
-      /* line 297, sass/_partials/_home.scss */
+      /* line 362, sass/_partials/_home.scss */
       #section-home-top .jumbotron h1 {
-        font-size: 36px;
+        font-size: 5vh;
         padding-left: 30px;
         border-left: 3px double white;
         line-height: 1; }
-    /* line 306, sass/_partials/_home.scss */
+    /* line 370, sass/_partials/_home.scss */
     #section-home-top #home-top-brands-wrapper {
       height: 10vh;
       padding: 15px; }
-      /* line 310, sass/_partials/_home.scss */
+      /* line 374, sass/_partials/_home.scss */
       #section-home-top #home-top-brands-wrapper h2 {
         font-size: 36px; }
-    /* line 316, sass/_partials/_home.scss */
+    /* line 380, sass/_partials/_home.scss */
     #section-home-top #home-brands-carousel-wrapper {
       height: 30vh;
       background-image: url(images/Good-Times-Tobacco-Concrete-BG.jpg);
       background-size: cover; }
-      /* line 321, sass/_partials/_home.scss */
+      /* line 385, sass/_partials/_home.scss */
       #section-home-top #home-brands-carousel-wrapper .container {
         height: 100%; }
-        /* line 326, sass/_partials/_home.scss */
+        /* line 390, sass/_partials/_home.scss */
         #section-home-top #home-brands-carousel-wrapper .container .row .col-md-12 {
           height: 100%; }
-          /* line 329, sass/_partials/_home.scss */
+          /* line 393, sass/_partials/_home.scss */
           #section-home-top #home-brands-carousel-wrapper .container .row .col-md-12 #mobile-pouch {
             height: 100%;
             width: auto; }
-          /* line 334, sass/_partials/_home.scss */
+          /* line 398, sass/_partials/_home.scss */
           #section-home-top #home-brands-carousel-wrapper .container .row .col-md-12 #carousel-home-brands {
             height: 100%; }
-            /* line 337, sass/_partials/_home.scss */
+            /* line 401, sass/_partials/_home.scss */
             #section-home-top #home-brands-carousel-wrapper .container .row .col-md-12 #carousel-home-brands .carousel-inner {
               height: 100%; }
-              /* line 340, sass/_partials/_home.scss */
+              /* line 404, sass/_partials/_home.scss */
               #section-home-top #home-brands-carousel-wrapper .container .row .col-md-12 #carousel-home-brands .carousel-inner .item {
                 height: 100%; }
-                /* line 343, sass/_partials/_home.scss */
+                /* line 407, sass/_partials/_home.scss */
                 #section-home-top #home-brands-carousel-wrapper .container .row .col-md-12 #carousel-home-brands .carousel-inner .item .carousel-pouch {
                   transition: all 1s; }
-    /* line 355, sass/_partials/_home.scss */
+    /* line 419, sass/_partials/_home.scss */
     #section-home-top #home-top-testimonial-wrapper {
       min-height: 20vh;
       background-color: #232021 !important;
       padding-top: 15px; }
-      /* line 360, sass/_partials/_home.scss */
+      /* line 424, sass/_partials/_home.scss */
       #section-home-top #home-top-testimonial-wrapper h2 {
         font-size: 24px; }
 
-  /* line 366, sass/_partials/_home.scss */
+  /* line 430, sass/_partials/_home.scss */
   #section-home-dark {
     height: 100vh;
     background-image: url(images/asfalt.png);
     padding-bottom: 60px; }
-    /* line 373, sass/_partials/_home.scss */
+    /* line 437, sass/_partials/_home.scss */
     #section-home-dark .row .col-md-6 {
       position: relative; }
-      /* line 376, sass/_partials/_home.scss */
+      /* line 440, sass/_partials/_home.scss */
       #section-home-dark .row .col-md-6:first-of-type img {
         position: relative;
         top: 30px; }
-      /* line 381, sass/_partials/_home.scss */
+      /* line 445, sass/_partials/_home.scss */
       #section-home-dark .row .col-md-6 img {
-        max-width: 350px; }
-      /* line 385, sass/_partials/_home.scss */
+        height: 40vh; }
+      /* line 449, sass/_partials/_home.scss */
       #section-home-dark .row .col-md-6 h3 {
-        font-size: 44px; }
-      /* line 389, sass/_partials/_home.scss */
+        font-size: 4vh; }
+      /* line 453, sass/_partials/_home.scss */
       #section-home-dark .row .col-md-6.text-column {
-        padding-top: 120px; }
-    /* line 395, sass/_partials/_home.scss */
+        padding-top: 10vh; }
+        /* line 456, sass/_partials/_home.scss */
+        #section-home-dark .row .col-md-6.text-column p {
+          margin-bottom: 1vh;
+          font-size: 2vh; }
+    /* line 464, sass/_partials/_home.scss */
     #section-home-dark .btn.btn-primary {
       border: 3px double #fcc328 !important;
       background-color: transparent;
       font-family: "Roboto Slab", Times New Roman, serif;
       text-transform: uppercase;
       border-radius: 0;
-      margin-top: 15px;
+      margin-top: 1vh;
       padding: 15px;
       transition: all .5s; }
-      /* line 405, sass/_partials/_home.scss */
+      /* line 474, sass/_partials/_home.scss */
       #section-home-dark .btn.btn-primary:hover {
         transform: scale(1.1, 1.1);
         background-color: #fcc328 !important;
         color: #232021 !important;
         border-color: #232021 !important; }
-    /* line 413, sass/_partials/_home.scss */
+    /* line 482, sass/_partials/_home.scss */
     #section-home-dark .good-times-circles {
       max-width: 100%; }
 
-  /* line 419, sass/_partials/_home.scss */
+  /* line 488, sass/_partials/_home.scss */
   #section-home-values {
     height: 100vh;
     background-image: url(images/Good-Times-Tobacco-Plant-BG.jpg); }
-    /* line 423, sass/_partials/_home.scss */
+    /* line 492, sass/_partials/_home.scss */
     #section-home-values #values-top-wrapper {
-      height: 55vh; }
-      /* line 426, sass/_partials/_home.scss */
+      height: 55vh;
+      padding-top: 10vh; }
+      /* line 496, sass/_partials/_home.scss */
       #section-home-values #values-top-wrapper .row {
         height: 100%; }
-        /* line 429, sass/_partials/_home.scss */
+        /* line 499, sass/_partials/_home.scss */
         #section-home-values #values-top-wrapper .row .col-md-6 {
           height: 100%; }
-          /* line 432, sass/_partials/_home.scss */
+          /* line 502, sass/_partials/_home.scss */
           #section-home-values #values-top-wrapper .row .col-md-6:first-of-type {
             display: flex;
             align-items: center;
             justify-content: center; }
-            /* line 437, sass/_partials/_home.scss */
+            /* line 507, sass/_partials/_home.scss */
             #section-home-values #values-top-wrapper .row .col-md-6:first-of-type #mission-statement {
               width: 400px;
-              height: 400px;
+              height: auto;
               background-color: rgba(0, 0, 0, 0.8);
               padding: 30px;
               text-align: center;
               border: 3px double #fcc328 !important; }
-              /* line 445, sass/_partials/_home.scss */
+              /* line 515, sass/_partials/_home.scss */
               #section-home-values #values-top-wrapper .row .col-md-6:first-of-type #mission-statement p {
                 font-size: 1rem; }
-          /* line 451, sass/_partials/_home.scss */
+          /* line 521, sass/_partials/_home.scss */
           #section-home-values #values-top-wrapper .row .col-md-6:nth-of-type(2) {
             display: flex;
             align-items: center;
             justify-content: center; }
-            /* line 456, sass/_partials/_home.scss */
+            /* line 526, sass/_partials/_home.scss */
             #section-home-values #values-top-wrapper .row .col-md-6:nth-of-type(2) #core-values {
               width: 500px;
               height: 500px; }
-    /* line 466, sass/_partials/_home.scss */
+              /* line 532, sass/_partials/_home.scss */
+              #section-home-values #values-top-wrapper .row .col-md-6:nth-of-type(2) #core-values #carousel-values img {
+                max-width: none; }
+    /* line 543, sass/_partials/_home.scss */
     #section-home-values #values-bottom-wrapper {
-      height: 45vh; }
-      /* line 469, sass/_partials/_home.scss */
+      height: 45vh;
+      padding-top: 10vh; }
+      /* line 547, sass/_partials/_home.scss */
       #section-home-values #values-bottom-wrapper h3 {
         font-size: 36px;
         margin: 0; }
-        /* line 473, sass/_partials/_home.scss */
+        /* line 551, sass/_partials/_home.scss */
         #section-home-values #values-bottom-wrapper h3 #core-value-span {
           text-transform: uppercase;
           font-size: 60px; }
-      /* line 480, sass/_partials/_home.scss */
+      /* line 558, sass/_partials/_home.scss */
       #section-home-values #values-bottom-wrapper .row:nth-of-type(2) {
         padding-top: 30px;
         min-height: 100px; }
-        /* line 484, sass/_partials/_home.scss */
+        /* line 562, sass/_partials/_home.scss */
         #section-home-values #values-bottom-wrapper .row:nth-of-type(2) .values-logo-wrap {
           display: inline-block;
           width: 12%;
           position: relative; }
-          /* line 489, sass/_partials/_home.scss */
+          /* line 567, sass/_partials/_home.scss */
           #section-home-values #values-bottom-wrapper .row:nth-of-type(2) .values-logo-wrap img {
             max-width: 80%;
             position: absolute;
@@ -717,10 +784,10 @@ p {
             -webkit-transform: translateX(-50%) translateY(-50%);
             -moz-transform: translateX(-50%) translateY(-50%);
             -ms-transform: translateX(-50%) translateY(-50%); }
-            /* line 499, sass/_partials/_home.scss */
+            /* line 577, sass/_partials/_home.scss */
             #section-home-values #values-bottom-wrapper .row:nth-of-type(2) .values-logo-wrap img:nth-of-type(2) {
               max-width: 70%; }
-      /* line 506, sass/_partials/_home.scss */
+      /* line 584, sass/_partials/_home.scss */
       #section-home-values #values-bottom-wrapper .btn.btn-primary {
         border: 3px double #fcc328 !important;
         background-color: rgba(0, 0, 0, 0.8);
@@ -731,30 +798,25 @@ p {
         margin: 0;
         font-size: 60px;
         padding: 0; }
-        /* line 517, sass/_partials/_home.scss */
+        /* line 595, sass/_partials/_home.scss */
         #section-home-values #values-bottom-wrapper .btn.btn-primary:hover {
           transform: scale(1.1, 1.1);
           background-color: #fcc328 !important;
           border-color: #232021 !important; }
 
-  /* line 526, sass/_partials/_home.scss */
+  /* line 604, sass/_partials/_home.scss */
   #section-home-roll {
     height: 100vh;
-    background-image: url(images/Good-Times-Tobacco-Hangout.jpg); }
-    /* line 530, sass/_partials/_home.scss */
+    background-image: url(images/Good-Times-Tobacco-Hangout.jpg);
+    padding-bottom: 10vh; }
+    /* line 609, sass/_partials/_home.scss */
     #section-home-roll h3 {
       margin-bottom: 30px;
       font-size: 2rem; } }
-@media (min-width: 996px) {
-  /* line 542, sass/_partials/_home.scss */
-  #section-home-top #home-brands-wrapper {
-    height: 30vh; }
-  /* line 546, sass/_partials/_home.scss */
-  #section-home-top .jumbotron {
-    height: 40vh; }
-    /* line 549, sass/_partials/_home.scss */
-    #section-home-top .jumbotron h1 {
-      font-size: 3.25vw; } }
+@media (max-width: 768px) {
+  /* line 623, sass/_partials/_home.scss */
+  #section-home-values #values-bottom-wrapper .btn.btn-primary {
+    font-size: 36px; } }
 /* line 1, sass/_partials/_page.scss */
 #int-page-wrapper {
   min-height: 100vh;
@@ -790,6 +852,10 @@ p {
       #int-page-wrapper #brand-sidebar-list a > li:hover {
         background-color: rgba(0, 0, 0, 0.2); }
 
+@media (max-width: 768px) {
+  /* line 52, sass/_partials/_page.scss */
+  #int-page-wrapper #brand-sidebar-list a > li {
+    display: inline-block; } }
 /* line 1, sass/_partials/_contact.scss */
 .contact-form-label {
   font-size: 24px; }
@@ -803,10 +869,13 @@ p {
   border-radius: 0;
   margin-top: 30px;
   padding: 15px;
-  transition: all .5s; }
-  /* line 15, sass/_partials/_contact.scss */
+  transition: all .5s;
+  font-size: 20px;
+  color: #232021 !important; }
+  /* line 17, sass/_partials/_contact.scss */
   #contact-form-submit:hover {
-    background-color: #232021 !important; }
+    background-color: #232021 !important;
+    color: #FFF !important; }
 
 /* line 1, sass/_partials/_category.scss */
 #section-category-top {
@@ -825,7 +894,7 @@ p {
 @media (min-width: 1024px) {
   /* line 23, sass/_partials/_category.scss */
   #section-category-top {
-    padding-top: 60px; } }
+    padding-top: 55px; } }
 /* line 1, sass/_partials/_category-brand-select.scss */
 #section-cat-brand-select {
   position: relative; }
@@ -886,105 +955,125 @@ p {
       background-color: #fcc328 !important;
       color: #232021 !important;
       border-color: #232021 !important; }
+  /* line 38, sass/_partials/_values.scss */
+  #section-values-top h2 {
+    margin-bottom: 30px; }
 
-/* line 42, sass/_partials/_values.scss */
+/* line 45, sass/_partials/_values.scss */
 #section-values-flavor .col-md-6:first-of-type {
   background-color: #fcc328 !important;
-  background-image: url(images/Good-Times-Yellow-Leaf-BG.jpg);
   background-size: cover;
   background-position: center center; }
-  /* line 48, sass/_partials/_values.scss */
+  /* line 50, sass/_partials/_values.scss */
   #section-values-flavor .col-md-6:first-of-type h2 {
     padding: 30px; }
-/* line 53, sass/_partials/_values.scss */
+/* line 55, sass/_partials/_values.scss */
 #section-values-flavor .col-md-6:nth-of-type(2) {
   background-image: url(images/Good-Times-Tobacco-Leaves-Hanging.jpg);
   background-size: cover;
   background-position: center center;
   padding: 30px; }
+  /* line 61, sass/_partials/_values.scss */
+  #section-values-flavor .col-md-6:nth-of-type(2) h2 {
+    margin-bottom: 15px; }
 
-/* line 64, sass/_partials/_values.scss */
+/* line 70, sass/_partials/_values.scss */
 #section-values-freshness .col-md-6:nth-of-type(2) {
   background-color: #232021 !important;
   background-image: url(images/Good-Times-Tobacco-Plant-Flowering.jpg);
   background-size: cover;
   background-position: center center;
   padding: 30px; }
-  /* line 71, sass/_partials/_values.scss */
+  /* line 77, sass/_partials/_values.scss */
   #section-values-freshness .col-md-6:nth-of-type(2) p {
     margin-bottom: 0; }
-/* line 76, sass/_partials/_values.scss */
+  /* line 81, sass/_partials/_values.scss */
+  #section-values-freshness .col-md-6:nth-of-type(2) h2 {
+    margin-bottom: 15px; }
+/* line 86, sass/_partials/_values.scss */
 #section-values-freshness .col-md-6:first-of-type {
   background-color: #fcc328 !important;
-  background-image: url(images/Good-Times-Yellow-Leaf-BG.jpg);
   background-size: cover;
   background-position: center center; }
-  /* line 82, sass/_partials/_values.scss */
+  /* line 91, sass/_partials/_values.scss */
   #section-values-freshness .col-md-6:first-of-type h2 {
     padding: 30px; }
 
-/* line 91, sass/_partials/_values.scss */
+/* line 100, sass/_partials/_values.scss */
 #section-values-quality .col-md-6:first-of-type {
   background-color: #fcc328 !important;
-  background-image: url(images/Good-Times-Yellow-Leaf-BG.jpg);
   background-size: cover;
   background-position: center center; }
-  /* line 97, sass/_partials/_values.scss */
+  /* line 105, sass/_partials/_values.scss */
   #section-values-quality .col-md-6:first-of-type h2 {
     padding: 30px; }
-/* line 102, sass/_partials/_values.scss */
+/* line 110, sass/_partials/_values.scss */
 #section-values-quality .col-md-6:nth-of-type(2) {
   background-image: url(images/Good-Times-Tobacco-Field.jpg);
   background-size: cover;
   background-position: center center;
   padding: 30px; }
-  /* line 108, sass/_partials/_values.scss */
+  /* line 116, sass/_partials/_values.scss */
   #section-values-quality .col-md-6:nth-of-type(2) p {
     margin-bottom: 0; }
+  /* line 120, sass/_partials/_values.scss */
+  #section-values-quality .col-md-6:nth-of-type(2) h2 {
+    margin-bottom: 15px; }
 
-/* line 117, sass/_partials/_values.scss */
+/* line 129, sass/_partials/_values.scss */
 #section-values-innovation .col-md-6:nth-of-type(2) {
   background-color: #232021 !important;
   background-image: url(images/Good-Times-Tobacco-Leaves-Hanging-2.jpg);
   background-size: cover;
   background-position: center center;
   padding: 30px; }
-/* line 125, sass/_partials/_values.scss */
+  /* line 136, sass/_partials/_values.scss */
+  #section-values-innovation .col-md-6:nth-of-type(2) h2 {
+    margin-bottom: 15px; }
+/* line 141, sass/_partials/_values.scss */
 #section-values-innovation .col-md-6:first-of-type {
   background-color: #fcc328 !important;
-  background-image: url(images/Good-Times-Yellow-Leaf-BG.jpg);
-  background-size: cover;
-  background-position: center center; }
-  /* line 131, sass/_partials/_values.scss */
-  #section-values-innovation .col-md-6:first-of-type h2 {
-    padding: 30px; }
-
-/* line 140, sass/_partials/_values.scss */
-#section-values-value .col-md-6:first-of-type {
-  background-color: #fcc328 !important;
-  background-image: url(images/Good-Times-Yellow-Leaf-BG.jpg);
   background-size: cover;
   background-position: center center; }
   /* line 146, sass/_partials/_values.scss */
+  #section-values-innovation .col-md-6:first-of-type h2 {
+    padding: 30px; }
+
+/* line 155, sass/_partials/_values.scss */
+#section-values-value .col-md-6:first-of-type {
+  background-color: #fcc328 !important;
+  background-size: cover;
+  background-position: center center; }
+  /* line 160, sass/_partials/_values.scss */
   #section-values-value .col-md-6:first-of-type h2 {
     padding: 30px; }
-/* line 151, sass/_partials/_values.scss */
+/* line 165, sass/_partials/_values.scss */
 #section-values-value .col-md-6:nth-of-type(2) {
   background-color: #232021 !important;
   background-image: url(images/Good-Times-Tobacco-Farm.jpg);
   background-size: cover;
   background-position: center center;
   padding: 30px; }
+  /* line 172, sass/_partials/_values.scss */
+  #section-values-value .col-md-6:nth-of-type(2) h2 {
+    margin-bottom: 15px; }
 
-@media (min-width: 1200px) {
-  /* line 171, sass/_partials/_values.scss */
+/*@media(min-width: 768px){
+  
+}
+
+@media(min-width: 996px){
+  
+}*/
+@media (min-width: 996px) {
+  /* line 189, sass/_partials/_values.scss */
   #section-values-top {
     height: 100vh;
     position: relative; }
-    /* line 175, sass/_partials/_values.scss */
+    /* line 193, sass/_partials/_values.scss */
     #section-values-top .container-fluid, #section-values-top .row, #section-values-top .col-md-12 {
       height: 100vh; }
-    /* line 179, sass/_partials/_values.scss */
+    /* line 197, sass/_partials/_values.scss */
     #section-values-top .center-wrapper {
       position: absolute;
       top: 50%;
@@ -993,14 +1082,15 @@ p {
       -webkit-transform: translateY(-50%) translateX(-50%);
       -moz-transform: translateY(-50%) translateX(-50%);
       -ms-transform: translateY(-50%) translateX(-50%);
-      font-size: 80px; }
-      /* line 189, sass/_partials/_values.scss */
+      font-size: 80px;
+      width: 80%; }
+      /* line 208, sass/_partials/_values.scss */
       #section-values-top .center-wrapper h1 {
         font-size: 80px; }
-      /* line 193, sass/_partials/_values.scss */
+      /* line 212, sass/_partials/_values.scss */
       #section-values-top .center-wrapper p {
         font-size: 28px; }
-      /* line 197, sass/_partials/_values.scss */
+      /* line 216, sass/_partials/_values.scss */
       #section-values-top .center-wrapper .btn.btn-primary {
         border: 3px double #fcc328 !important;
         background-color: transparent;
@@ -1010,23 +1100,23 @@ p {
         margin-top: 15px;
         padding: 15px;
         transition: all .5s; }
-        /* line 207, sass/_partials/_values.scss */
+        /* line 226, sass/_partials/_values.scss */
         #section-values-top .center-wrapper .btn.btn-primary:hover {
           transform: scale(1.1, 1.1);
           background-color: #fcc328 !important;
           color: #232021 !important;
           border-color: #232021 !important; }
 
-  /* line 217, sass/_partials/_values.scss */
+  /* line 236, sass/_partials/_values.scss */
   #section-values-flavor {
     height: 100vh; }
-    /* line 220, sass/_partials/_values.scss */
+    /* line 239, sass/_partials/_values.scss */
     #section-values-flavor .container-fluid, #section-values-flavor .row, #section-values-flavor .col-md-6 {
       height: 100vh; }
-    /* line 224, sass/_partials/_values.scss */
+    /* line 243, sass/_partials/_values.scss */
     #section-values-flavor .col-md-6:first-of-type {
       background-color: #fcc328 !important; }
-      /* line 227, sass/_partials/_values.scss */
+      /* line 246, sass/_partials/_values.scss */
       #section-values-flavor .col-md-6:first-of-type .center-wrapper {
         position: absolute;
         top: 50%;
@@ -1034,14 +1124,15 @@ p {
         transform: translateY(-50%) translateX(-50%);
         -webkit-transform: translateY(-50%) translateX(-50%);
         -moz-transform: translateY(-50%) translateX(-50%);
-        -ms-transform: translateY(-50%) translateX(-50%); }
-        /* line 237, sass/_partials/_values.scss */
+        -ms-transform: translateY(-50%) translateX(-50%);
+        width: 80%; }
+        /* line 257, sass/_partials/_values.scss */
         #section-values-flavor .col-md-6:first-of-type .center-wrapper h2 {
           font-size: 80px; }
-    /* line 243, sass/_partials/_values.scss */
+    /* line 263, sass/_partials/_values.scss */
     #section-values-flavor .col-md-6:nth-of-type(2) {
       background-color: #232021 !important; }
-      /* line 246, sass/_partials/_values.scss */
+      /* line 266, sass/_partials/_values.scss */
       #section-values-flavor .col-md-6:nth-of-type(2) .center-wrapper {
         position: absolute;
         top: 50%;
@@ -1051,18 +1142,19 @@ p {
         -moz-transform: translateY(-50%) translateX(-50%);
         -ms-transform: translateY(-50%) translateX(-50%);
         padding: 15px;
-        border: 3px double #fcc328 !important; }
-        /* line 258, sass/_partials/_values.scss */
+        border: 3px double #fcc328 !important;
+        width: 80%; }
+        /* line 279, sass/_partials/_values.scss */
         #section-values-flavor .col-md-6:nth-of-type(2) .center-wrapper h3 {
           margin-bottom: 15px; }
 
-  /* line 265, sass/_partials/_values.scss */
+  /* line 286, sass/_partials/_values.scss */
   #section-values-freshness {
     height: 100vh; }
-    /* line 268, sass/_partials/_values.scss */
+    /* line 289, sass/_partials/_values.scss */
     #section-values-freshness .container-fluid, #section-values-freshness .row, #section-values-freshness .col-md-6 {
       height: 100vh; }
-    /* line 273, sass/_partials/_values.scss */
+    /* line 294, sass/_partials/_values.scss */
     #section-values-freshness .col-md-6:nth-of-type(2) .center-wrapper {
       position: absolute;
       top: 50%;
@@ -1072,11 +1164,12 @@ p {
       -moz-transform: translateY(-50%) translateX(-50%);
       -ms-transform: translateY(-50%) translateX(-50%);
       padding: 15px;
-      border: 3px double #fcc328 !important; }
-      /* line 285, sass/_partials/_values.scss */
+      border: 3px double #fcc328 !important;
+      width: 80%; }
+      /* line 307, sass/_partials/_values.scss */
       #section-values-freshness .col-md-6:nth-of-type(2) .center-wrapper h3 {
         margin-bottom: 15px; }
-    /* line 294, sass/_partials/_values.scss */
+    /* line 316, sass/_partials/_values.scss */
     #section-values-freshness .col-md-6:first-of-type .center-wrapper {
       position: absolute;
       top: 50%;
@@ -1084,21 +1177,22 @@ p {
       transform: translateY(-50%) translateX(-50%);
       -webkit-transform: translateY(-50%) translateX(-50%);
       -moz-transform: translateY(-50%) translateX(-50%);
-      -ms-transform: translateY(-50%) translateX(-50%); }
-      /* line 304, sass/_partials/_values.scss */
+      -ms-transform: translateY(-50%) translateX(-50%);
+      width: 80%; }
+      /* line 327, sass/_partials/_values.scss */
       #section-values-freshness .col-md-6:first-of-type .center-wrapper h2 {
         font-size: 80px; }
 
-  /* line 312, sass/_partials/_values.scss */
+  /* line 335, sass/_partials/_values.scss */
   #section-values-quality {
     height: 100vh; }
-    /* line 315, sass/_partials/_values.scss */
+    /* line 338, sass/_partials/_values.scss */
     #section-values-quality .container-fluid, #section-values-quality .row, #section-values-quality .col-md-6 {
       height: 100vh; }
-    /* line 319, sass/_partials/_values.scss */
+    /* line 342, sass/_partials/_values.scss */
     #section-values-quality .col-md-6:first-of-type {
       background-color: #fcc328 !important; }
-      /* line 322, sass/_partials/_values.scss */
+      /* line 345, sass/_partials/_values.scss */
       #section-values-quality .col-md-6:first-of-type .center-wrapper {
         position: absolute;
         top: 50%;
@@ -1106,14 +1200,15 @@ p {
         transform: translateY(-50%) translateX(-50%);
         -webkit-transform: translateY(-50%) translateX(-50%);
         -moz-transform: translateY(-50%) translateX(-50%);
-        -ms-transform: translateY(-50%) translateX(-50%); }
-        /* line 332, sass/_partials/_values.scss */
+        -ms-transform: translateY(-50%) translateX(-50%);
+        width: 80%; }
+        /* line 356, sass/_partials/_values.scss */
         #section-values-quality .col-md-6:first-of-type .center-wrapper h2 {
           font-size: 80px; }
-    /* line 338, sass/_partials/_values.scss */
+    /* line 362, sass/_partials/_values.scss */
     #section-values-quality .col-md-6:nth-of-type(2) {
       background-color: #232021 !important; }
-      /* line 341, sass/_partials/_values.scss */
+      /* line 365, sass/_partials/_values.scss */
       #section-values-quality .col-md-6:nth-of-type(2) .center-wrapper {
         position: absolute;
         top: 50%;
@@ -1123,18 +1218,19 @@ p {
         -moz-transform: translateY(-50%) translateX(-50%);
         -ms-transform: translateY(-50%) translateX(-50%);
         padding: 15px;
-        border: 3px double #fcc328 !important; }
-        /* line 353, sass/_partials/_values.scss */
+        border: 3px double #fcc328 !important;
+        width: 80%; }
+        /* line 378, sass/_partials/_values.scss */
         #section-values-quality .col-md-6:nth-of-type(2) .center-wrapper h3 {
           margin-bottom: 15px; }
 
-  /* line 361, sass/_partials/_values.scss */
+  /* line 386, sass/_partials/_values.scss */
   #section-values-innovation {
     height: 100vh; }
-    /* line 364, sass/_partials/_values.scss */
+    /* line 389, sass/_partials/_values.scss */
     #section-values-innovation .container-fluid, #section-values-innovation .row, #section-values-innovation .col-md-6 {
       height: 100vh; }
-    /* line 369, sass/_partials/_values.scss */
+    /* line 394, sass/_partials/_values.scss */
     #section-values-innovation .col-md-6:nth-of-type(2) .center-wrapper {
       position: absolute;
       top: 50%;
@@ -1144,11 +1240,12 @@ p {
       -moz-transform: translateY(-50%) translateX(-50%);
       -ms-transform: translateY(-50%) translateX(-50%);
       padding: 15px;
-      border: 3px double #fcc328 !important; }
-      /* line 381, sass/_partials/_values.scss */
+      border: 3px double #fcc328 !important;
+      width: 80%; }
+      /* line 407, sass/_partials/_values.scss */
       #section-values-innovation .col-md-6:nth-of-type(2) .center-wrapper h3 {
         margin-bottom: 15px; }
-    /* line 390, sass/_partials/_values.scss */
+    /* line 416, sass/_partials/_values.scss */
     #section-values-innovation .col-md-6:first-of-type .center-wrapper {
       position: absolute;
       top: 50%;
@@ -1156,21 +1253,22 @@ p {
       transform: translateY(-50%) translateX(-50%);
       -webkit-transform: translateY(-50%) translateX(-50%);
       -moz-transform: translateY(-50%) translateX(-50%);
-      -ms-transform: translateY(-50%) translateX(-50%); }
-      /* line 400, sass/_partials/_values.scss */
+      -ms-transform: translateY(-50%) translateX(-50%);
+      width: 80%; }
+      /* line 427, sass/_partials/_values.scss */
       #section-values-innovation .col-md-6:first-of-type .center-wrapper h2 {
         font-size: 80px; }
 
-  /* line 408, sass/_partials/_values.scss */
+  /* line 435, sass/_partials/_values.scss */
   #section-values-value {
     height: 100vh; }
-    /* line 411, sass/_partials/_values.scss */
+    /* line 438, sass/_partials/_values.scss */
     #section-values-value .container-fluid, #section-values-value .row, #section-values-value .col-md-6 {
       height: 100vh; }
-    /* line 415, sass/_partials/_values.scss */
+    /* line 442, sass/_partials/_values.scss */
     #section-values-value .col-md-6:first-of-type {
       background-color: #fcc328 !important; }
-      /* line 418, sass/_partials/_values.scss */
+      /* line 445, sass/_partials/_values.scss */
       #section-values-value .col-md-6:first-of-type .center-wrapper {
         position: absolute;
         top: 50%;
@@ -1178,14 +1276,15 @@ p {
         transform: translateY(-50%) translateX(-50%);
         -webkit-transform: translateY(-50%) translateX(-50%);
         -moz-transform: translateY(-50%) translateX(-50%);
-        -ms-transform: translateY(-50%) translateX(-50%); }
-        /* line 428, sass/_partials/_values.scss */
+        -ms-transform: translateY(-50%) translateX(-50%);
+        width: 80%; }
+        /* line 456, sass/_partials/_values.scss */
         #section-values-value .col-md-6:first-of-type .center-wrapper h2 {
           font-size: 80px; }
-    /* line 435, sass/_partials/_values.scss */
+    /* line 463, sass/_partials/_values.scss */
     #section-values-value .col-md-6:nth-of-type(2) {
       background-color: #232021 !important; }
-      /* line 438, sass/_partials/_values.scss */
+      /* line 466, sass/_partials/_values.scss */
       #section-values-value .col-md-6:nth-of-type(2) .center-wrapper {
         position: absolute;
         top: 50%;
@@ -1195,8 +1294,9 @@ p {
         -moz-transform: translateY(-50%) translateX(-50%);
         -ms-transform: translateY(-50%) translateX(-50%);
         padding: 15px;
-        border: 3px double #fcc328 !important; }
-        /* line 450, sass/_partials/_values.scss */
+        border: 3px double #fcc328 !important;
+        width: 80%; }
+        /* line 479, sass/_partials/_values.scss */
         #section-values-value .col-md-6:nth-of-type(2) .center-wrapper h3 {
           margin-bottom: 15px; } }
 /* line 1, sass/_partials/_single-product.scss */
@@ -1236,11 +1336,14 @@ p {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translateX(-50%) translateY(-50%); }
-      /* line 62, sass/_partials/_single-product.scss */
+      transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%); }
+      /* line 65, sass/_partials/_single-product.scss */
       #section-single-product .container .row:first-of-type {
         margin-bottom: 30px; }
-      /* line 66, sass/_partials/_single-product.scss */
+      /* line 69, sass/_partials/_single-product.scss */
       #section-single-product .container .row .col-md-6:first-of-type {
         text-align: right;
         padding-top: 0; } }
@@ -1259,22 +1362,24 @@ p {
       height: 100%; }
       /* line 14, sass/_partials/_fixed-footer.scss */
       #section-fixed-footer .container-fluid .row #join-us {
-        padding-top: 10px; }
-      /* line 18, sass/_partials/_fixed-footer.scss */
+        padding-top: 10px;
+        min-height: 55px; }
+      /* line 19, sass/_partials/_fixed-footer.scss */
       #section-fixed-footer .container-fluid .row .col-md-6 {
         padding: 8px;
         height: 100%; }
-        /* line 23, sass/_partials/_fixed-footer.scss */
+        /* line 24, sass/_partials/_fixed-footer.scss */
         #section-fixed-footer .container-fluid .row .col-md-6 p {
-          line-height: 18px;
-          margin: 0; }
-        /* line 28, sass/_partials/_fixed-footer.scss */
+          line-height: 36px;
+          margin: 0;
+          font-size: 16px; }
+        /* line 30, sass/_partials/_fixed-footer.scss */
         #section-fixed-footer .container-fluid .row .col-md-6 #get-email-input {
           max-width: 200px;
           display: inline-block;
           border: none;
           border-radius: 0; }
-        /* line 35, sass/_partials/_fixed-footer.scss */
+        /* line 37, sass/_partials/_fixed-footer.scss */
         #section-fixed-footer .container-fluid .row .col-md-6 #email-btn {
           display: inline-block;
           border: 3px double #232021 !important;
@@ -1538,24 +1643,32 @@ p {
   top: 0;
   bottom: 0;
   width: 100%;
-  z-index: 2000; }
-  /* line 10, sass/_partials/_age-verify.scss */
+  z-index: 2600; }
+  /* line 11, sass/_partials/_age-verify.scss */
   #age-verify-wrapper #age-verify-center {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%); }
-  /* line 17, sass/_partials/_age-verify.scss */
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    width: 100%; }
+  /* line 22, sass/_partials/_age-verify.scss */
   #age-verify-wrapper h3 {
     padding-bottom: 30px; }
-  /* line 25, sass/_partials/_age-verify.scss */
+  /* line 26, sass/_partials/_age-verify.scss */
+  #age-verify-wrapper #age-verify-logo {
+    width: 50%; }
+  /* line 30, sass/_partials/_age-verify.scss */
   #age-verify-wrapper #dm-age-month,
   #age-verify-wrapper #dm-age-day,
   #age-verify-wrapper #dm-age-year {
     border-radius: 0px;
     opacity: 0.9;
-    font-family: "Lato", Veranda, sans-serif; }
-  /* line 33, sass/_partials/_age-verify.scss */
+    font-family: "Lato", Veranda, sans-serif;
+    margin-bottom: 10px; }
+  /* line 39, sass/_partials/_age-verify.scss */
   #age-verify-wrapper #check-age-button {
     border: 3px double #fcc328 !important;
     background-color: transparent;
@@ -1565,13 +1678,23 @@ p {
     margin-top: 30px;
     padding: 15px;
     transition: all .5s; }
-    /* line 43, sass/_partials/_age-verify.scss */
+    /* line 49, sass/_partials/_age-verify.scss */
     #age-verify-wrapper #check-age-button:hover {
       transform: scale(1.1, 1.1);
       background-color: #fcc328 !important;
       color: #232021 !important;
       border-color: #232021 !important; }
+  /* line 57, sass/_partials/_age-verify.scss */
+  #age-verify-wrapper #dm-verify-message {
+    margin-top: 20px;
+    font-size: 28px;
+    line-height: 24px;
+    min-height: 24px; }
 
+@media (max-width: 320px) {
+  /* line 67, sass/_partials/_age-verify.scss */
+  #age-verify-wrapper #dm-verify-message {
+    font-size: 20px; } }
 /* line 3, sass/_partials/_twitter.scss */
 .tweet-list #twitter-column-2,
 .tweet-list #twitter-column-3,
@@ -1593,7 +1716,7 @@ p {
   .tweet-list .tweet-wrapper .tweet-content a {
     color: #fcc328 !important; }
 
-@media (min-height: 768px) {
+@media (min-width: 768px) {
   /* line 37, sass/_partials/_twitter.scss */
   .tweet-list #twitter-column-2,
   .tweet-list #twitter-column-3,
@@ -1611,16 +1734,17 @@ p {
   .tweet-list .tweet-wrapper .tweet-content {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 10px;
-    min-height: 200px; }
-    /* line 61, sass/_partials/_twitter.scss */
+    min-height: 200px;
+    word-break: break-word; }
+    /* line 62, sass/_partials/_twitter.scss */
     .tweet-list .tweet-wrapper .tweet-content a {
       color: #fcc328 !important; }
-  /* line 67, sass/_partials/_twitter.scss */
+  /* line 68, sass/_partials/_twitter.scss */
   .tweet-list .tweet-wrapper .tweet-meta {
     margin-bottom: 20px;
     padding: 5px;
     background-color: #fcc328 !important; }
-    /* line 72, sass/_partials/_twitter.scss */
+    /* line 73, sass/_partials/_twitter.scss */
     .tweet-list .tweet-wrapper .tweet-meta p {
       margin: 0;
       color: #232021 !important;
@@ -1632,8 +1756,13 @@ p {
   height: 262px;
   background-size: cover;
   position: relative;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  max-width: 262px;
+  margin: 0 auto 15px; }
   /* line 3, sass/_partials/_instagram.scss */
+  .instagram-pic-wrapper#insta-column-2, .instagram-pic-wrapper#insta-column-3, .instagram-pic-wrapper#insta-column-4 {
+    display: none !important; }
+  /* line 9, sass/_partials/_instagram.scss */
   .instagram-pic-wrapper .instagram-overlay {
     position: absolute;
     width: 100%;
@@ -1641,15 +1770,15 @@ p {
     background-color: rgba(0, 0, 0, 0.8);
     text-align: center;
     display: none; }
-    /* line 12, sass/_partials/_instagram.scss */
+    /* line 18, sass/_partials/_instagram.scss */
     .instagram-pic-wrapper .instagram-overlay p {
       font-family: "Roboto Slab", Times New Roman, serif;
       color: #FFF;
       margin: 0; }
-    /* line 18, sass/_partials/_instagram.scss */
+    /* line 24, sass/_partials/_instagram.scss */
     .instagram-pic-wrapper .instagram-overlay .fa {
       color: #fcc328 !important; }
-    /* line 22, sass/_partials/_instagram.scss */
+    /* line 28, sass/_partials/_instagram.scss */
     .instagram-pic-wrapper .instagram-overlay .instagram-center-wrapper {
       position: absolute;
       top: 50%;
@@ -1661,20 +1790,20 @@ p {
       width: 100%;
       background-color: #232021 !important;
       padding: 20px 8px; }
-  /* line 45, sass/_partials/_instagram.scss */
+  /* line 53, sass/_partials/_instagram.scss */
   .instagram-pic-wrapper:nth-of-type(2), .instagram-pic-wrapper:nth-of-type(3), .instagram-pic-wrapper:nth-of-type(4) {
     display: none; }
 
 @media (min-width: 768px) {
-  /* line 54, sass/_partials/_instagram.scss */
+  /* line 62, sass/_partials/_instagram.scss */
   .instagram-pic-wrapper {
     -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.7);
     -moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.7);
     box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.7); }
-    /* line 59, sass/_partials/_instagram.scss */
-    .instagram-pic-wrapper:nth-of-type(2), .instagram-pic-wrapper:nth-of-type(3), .instagram-pic-wrapper:nth-of-type(4) {
-      display: inherit; }
-    /* line 65, sass/_partials/_instagram.scss */
+    /* line 67, sass/_partials/_instagram.scss */
+    .instagram-pic-wrapper#insta-column-2, .instagram-pic-wrapper#insta-column-3, .instagram-pic-wrapper#insta-column-4 {
+      display: block !important; }
+    /* line 73, sass/_partials/_instagram.scss */
     .instagram-pic-wrapper .instagram-overlay {
       position: absolute;
       width: 100%;
@@ -1682,15 +1811,15 @@ p {
       background-color: rgba(0, 0, 0, 0.8);
       text-align: center;
       display: none; }
-      /* line 74, sass/_partials/_instagram.scss */
+      /* line 82, sass/_partials/_instagram.scss */
       .instagram-pic-wrapper .instagram-overlay p {
         font-family: "Roboto Slab", Times New Roman, serif;
         color: #FFF;
         margin: 0; }
-      /* line 80, sass/_partials/_instagram.scss */
+      /* line 88, sass/_partials/_instagram.scss */
       .instagram-pic-wrapper .instagram-overlay .fa {
         color: #fcc328 !important; }
-      /* line 84, sass/_partials/_instagram.scss */
+      /* line 92, sass/_partials/_instagram.scss */
       .instagram-pic-wrapper .instagram-overlay .instagram-center-wrapper {
         position: absolute;
         top: 50%;
@@ -1830,7 +1959,7 @@ p {
 #staff-info {
   max-width: 100%;
   height: auto;
-  min-height: 300px; }
+  min-height: 450px; }
 
 /* line 116, sass/_partials/_masterslider.scss */
 .ms-staff-carousel .ms-nav-next {
@@ -1846,22 +1975,29 @@ p {
   background-size: cover;
   background-position: center center !important; }
 
-@media (min-width: 1200px) {
+/* line 131, sass/_partials/_masterslider.scss */
+#masterslider-testimonials .ms-view {
+  background-color: transparent; }
   /* line 136, sass/_partials/_masterslider.scss */
+  #masterslider-testimonials .ms-view .ms-slide p {
+    font-size: 1.5rem; }
+
+@media (min-width: 1200px) {
+  /* line 149, sass/_partials/_masterslider.scss */
   #masterslider .ms-container .ms-inner-controls-cont {
     width: 800px;
     max-width: none !important; } }
-/* line 148, sass/_partials/_masterslider.scss */
+/* line 161, sass/_partials/_masterslider.scss */
 .ms-info p {
   background-color: rgba(255, 255, 255, 0.7);
   padding: 15px;
   margin: 15px 0; }
 
-/* line 155, sass/_partials/_masterslider.scss */
+/* line 168, sass/_partials/_masterslider.scss */
 #mobile-product-table {
   background-color: rgba(255, 255, 255, 0.7);
   margin-top: 10px; }
-  /* line 159, sass/_partials/_masterslider.scss */
+  /* line 172, sass/_partials/_masterslider.scss */
   #mobile-product-table .table-left {
     background-color: #232021 !important;
     color: #fcc328 !important;
@@ -1869,6 +2005,6 @@ p {
     border-top: 1px solid #444;
     font-family: "Roboto Slab", Times New Roman, serif;
     line-height: 14px; }
-  /* line 168, sass/_partials/_masterslider.scss */
+  /* line 181, sass/_partials/_masterslider.scss */
   #mobile-product-table td {
     vertical-align: middle; }

@@ -17,7 +17,7 @@
       
       a{
         font-family: $hFont;
-        font-size: 28px;
+        font-size: 24px;
         text-shadow: 4px 3px 3px rgba(0,0,0,0.5);
         color: $yellow;
         transition: all .5s;
@@ -107,7 +107,7 @@
     -ms-transform: translateY(-50%) translateX(-50%);
     
     li{
-      font-size: 28px;
+      font-size: 24px;
       font-family: $hFont;
       
       a{
@@ -149,13 +149,17 @@
   }
 }
 
-@media(max-width: 996px){
+@media(max-width: 1024px){
   #goodtimes-navbar{
     display: none;
   }
+  
+  #mobile-nav ul#menu-main-nav li{
+    font-size: 24px;
+  }
 }
 
-@media(min-width: 996px){
+@media(min-width: 1025px){
   #mobile-nav-toggle{
     display: none;
   }

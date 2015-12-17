@@ -129,3 +129,20 @@ $('#myModal').on('show.bs.modal', function (e) {
   }
   
 });
+
+/**
+* Our Value Scrollify Controls
+*/
+
+$('#btn-values-discover').click(function(){
+  
+  $.scrollify.move("#values-flavor");
+  
+});
+
+
+
+
+
+
+

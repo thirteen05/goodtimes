@@ -5,13 +5,18 @@
   top: 0;
   bottom: 0;
   width: 100%;
-  z-index: 2000;
+  z-index: 2600;
+  
   
   #age-verify-center{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    width: 100%;
   }
   
   h3{
@@ -19,7 +24,7 @@
   }
   
   #age-verify-logo{
-    
+    width: 50%;
   }
   
   #dm-age-month,
@@ -28,6 +33,7 @@
     border-radius: 0px;
     opacity: 0.9;
     font-family: $pFont;
+    margin-bottom: 10px;
   }
   
   #check-age-button{
@@ -46,5 +52,19 @@
           color: $charcoal;
           border-color: $charcoal;
         }
+  }
+  
+  #dm-verify-message{
+    margin-top: 20px;
+    font-size: 28px;
+    line-height: 24px;
+    min-height: 24px;
+  }
+}
+
+@media(max-width: 320px){
+  
+  #age-verify-wrapper #dm-verify-message{
+    font-size: 20px;
   }
 }

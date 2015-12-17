@@ -52,7 +52,9 @@
   </div>
     <div class="row">
       <div class="col-md-4 col-md-offset-4">
-        <button id="btn-similar-products" class="btn btn-primary btn-lg btn-block">View Similar Products</button>
+        <a href="<?php echo get_single_product_cat_link(); ?>">
+          <button id="btn-similar-products" class="btn btn-primary btn-lg btn-block">View Similar Products</button>
+        </a>
       </div>
     </div>
 </section>

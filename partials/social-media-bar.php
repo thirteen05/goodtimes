@@ -1,6 +1,6 @@
 <div id="social-media-bar" class="text-center hidden-xs">
   <ul>
-    <a href="http://www.facebook.com" target="_blank">
+    <a href="https://www.facebook.com/GOOD-TIMES-TOBACCO-USA-111390685862/" target="_blank">
       <li>
         <i class="fa fa-facebook font-white"></i>
       </li>
@@ -12,13 +12,13 @@
       </li>    
     </a>
 
-    <a href="http://www.google.com" target="_blank">
+    <a href="https://plus.google.com/101819011518960106714" target="_blank">
       <li>
         <i class="fa fa-google-plus font-white"></i>
       </li>
     </a>
     
-    <a href="http://www.pinterest.com" target="_blank">
+    <a href="https://www.pinterest.com/goodtimeshot100/" target="_blank">
       <li>
         <i class="fa fa-pinterest font-white"></i>
       </li>
@@ -30,13 +30,13 @@
       </li>
     </a>
     
-    <a href="http://www.youtube.com" target="_blank">
+    <a href="https://www.youtube.com/user/OFFICIALGOODTIMESTV" target="_blank">
       <li>
         <i class="fa fa-youtube font-white"></i>
       </li>
     </a>
     
-    <a href="http://www.soundcloud.com" target="_blank">
+    <a href="https://soundcloud.com/goodtimeshot100" target="_blank">
       <li>
         <i class="fa fa-soundcloud font-white"></i>
       </li>

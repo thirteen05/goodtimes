@@ -34,6 +34,14 @@ h1,h2,h3,h4,h5,h6{
 p{
   font-family: $pFont;
   font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem
+}
+
+a{
+  &:hover{
+    text-decoration: none;
+  }
 }
 
 .text-shadow{
@@ -62,8 +70,9 @@ p{
     
     img{
       display: block;
-      max-width: 150px;
+      width: 150px;
       margin-bottom: 15px;
+      height: 40px;
     }
   }
   
@@ -82,6 +91,10 @@ p{
    outline: none !important;
 }
 
+
+.scrollify-section{
+  overflow: hidden; //Internet Explorer Fix
+}
 
 @-webkit-keyframes rotating /* Safari and Chrome */ {
   from {

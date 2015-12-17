@@ -1,5 +1,11 @@
 .instagram-pic-wrapper{
   
+  &#insta-column-2,
+  &#insta-column-3,
+  &#insta-column-4,{
+    display: none!important;
+  }
+  
   .instagram-overlay{
 
       position: absolute;
@@ -41,6 +47,8 @@
   background-size: cover;
   position: relative;
   margin-bottom: 15px;
+  max-width: 262px;
+  margin: 0 auto 15px;
   
   &:nth-of-type(2),
   &:nth-of-type(3),
@@ -56,10 +64,10 @@
     -moz-box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
     box-shadow: 0 8px 6px -6px rgba(0,0,0,0.7);
     
-    &:nth-of-type(2),
-    &:nth-of-type(3),
-    &:nth-of-type(4){
-      display: inherit;
+    &#insta-column-2,
+    &#insta-column-3,
+    &#insta-column-4,{
+      display: block!important;
     }
     
     .instagram-overlay{
@@ -92,8 +100,7 @@
         width: 100%;
         background-color: $charcoal;
         padding: 20px 8px;
-        
-        
+    
         
       }
 
